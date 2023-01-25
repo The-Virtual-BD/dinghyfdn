@@ -119,8 +119,9 @@ class HomeController extends Controller
 
     public function gallerydetails(Gallery $gallery)
     {
+        $galleries = Gallery::all();
         $gallery->getMedia();
-        return view('gallerydetails', compact('gallery'));
+        return view('gallerydetails', compact('gallery','galleries'));
     }
 
 

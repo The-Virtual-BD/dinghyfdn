@@ -1,10 +1,9 @@
 <x-guest-layout>
-    <div class="p-4 sm:p-0 bg-home-hero bg-cover bg-center bg-no-repeat ">
+    <div class="p-4 sm:p-0 bg-home-hero bg-cover bg-center bg-no-repeat bg-gray-900/40 bg-blend-overlay">
         <div class="max-w-7xl sm:pt-[250px] sm:pb-[120px] mx-auto px-4 sm:px-6 lg:px-8">
             <p class="pl-4 border-l-4 border-eve text-lg font-raleway italic text-white">Bangladesh</p>
-            <p class="font-bold font-oswald text-3xl sm:text-5xl text-white mt-5">We help poor students for their
-                <br>education & trying to support them <br> with money and educational elements.
-            </p>
+            <h1 class="invisible">Dinghy Foundation</h1>
+            <h2 class="font-bold font-oswald text-3xl sm:text-5xl text-white mt-5">In nutshell to work towards crafting a better Bangladesh which ensures basic health, education, empowerment, and equality to every citizen.</h2>
         </div>
     </div>
     <div class="bg-wwo bg-cover bg-no-repeat bg-center bg-blend-overlay">
@@ -12,46 +11,45 @@
             <div class="flex justify-between gap-2">
                 <div class="relative">
                     <img src="{{ asset('img/wwo.jpg') }}" alt="We Are World WIde Organization">
-                    <div class="bg-eve w-14 h-14 rounded-full flex justify-center items-center absolute top-1/3 sm:top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" onclick=" videopopup();">
+                    <div class="bg-eve w-14 h-14 rounded-full flex justify-center items-center absolute top-1/3 sm:top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+                        onclick=" videopopup();">
                         <span class="iconify text-white text-4xl" data-icon="material-symbols:play-arrow"></span>
                     </div>
                 </div>
                 <div class="sm:pr-20 pt-0 sm:pt-10 text-right">
                     <div class="mb-4 sm:mb-7">
-                        <p class="font-oswald font-bold text-3xl sm:text-5xl mb-1">6,478</p>
+                        <p class="font-oswald font-bold text-3xl sm:text-5xl mb-1">19</p>
                         <p class="italic font-raleway text-base sm:text-lg mb-3 sm:mb-5">Volunteers In 2022</p>
                         <div class="flex justify-end">
                             <hr class="border-b border-eve w-16 sm:w-32">
                         </div>
                     </div>
                     <div class="mb-4 sm:mb-7">
-                        <p class="font-oswald font-bold text-3xl sm:text-5xl mb-1">2,348,195</p>
-                        <p class="italic font-raleway text-base sm:text-lg mb-3 sm:mb-5">People We Helped In 2020</p>
+                        <p class="font-oswald font-bold text-3xl sm:text-5xl mb-1">198</p>
+                        <p class="italic font-raleway text-base sm:text-lg mb-3 sm:mb-5">People We Helped from 2018</p>
                         <div class="flex justify-end">
                             <hr class="border-b border-eve w-16 sm:w-32">
                         </div>
                     </div>
                     <div class="">
-                        <p class="font-oswald font-bold text-3xl sm:text-5xl mb-1">$ 16M</p>
+                        <p class="font-oswald font-bold text-3xl sm:text-5xl mb-1">$ 0M</p>
                         <p class="italic font-raleway text-base sm:text-lg mb-3 sm:mb-5">Funds We Collected</p>
                     </div>
                 </div>
 
             </div>
             <div class="">
-                <p class="font-raleway italic text-base sm:text-lg text-center sm:text-left mb-6">Help The Poor’s With
-                    Dinghy Foundation</p>
-                <h2 class="font-oswald font-bold text-4xl sm:text-5xl mb-6 text-center sm:text-left">We Are World WIde
+                <p class="font-raleway italic text-base sm:text-lg text-center sm:text-left mb-6">We work for better
+                    <strong>world</strong> </p>
+                <h2 class="font-oswald font-bold text-4xl sm:text-5xl mb-6 text-center sm:text-left">We Are World Wide
                     <br> Organization
                 </h2>
-                <p class="font-faleway text-base sm:text-lg mb-12 text-justify sm:text-left">On 24/11/2018, 50
-                    foundation students of the poorest of meritorious students started their journey to the quiz
-                    contest, painting competition and cultural establishment .The name was collected for the purpose of
-                    the education of the student student. In continuation of this we postpone the next 22/12/18 for
-                    distribution of Shibt Shastra. <br> <br>
-
-                    If someone wishes to join us in the Foundation, then the following forms are requested to be filled.
-                    You can solve all the problems in our country.
+                <p class="font-faleway text-base sm:text-lg mb-12 text-justify sm:text-left">On November 24, 2018, the
+                    Dinghy foundation began their journey by organizing a program for 59 pupils. It was founded with
+                    "Better Life, Better World" as its motto. <br> <br>We concentrated mostly on poverty in Bangladesh,
+                    Child Development, Education for Poor & Street Children, Skill Development, Health Programs, Rural
+                    Development Programs, Women Empowerment, Environment Protection, Slum Development, etc. We think
+                    that everyone deserves a life that is worthy, meaningful, and dignified.
                 </p>
                 <a href="{{ route('about') }}" class="flex justify-center sm:justify-start">
                     <x-largee-button>{{ __('Foundation info') }}</x-largee-button>
@@ -62,7 +60,7 @@
 
     <div class="bg-adam-light">
         <div class="max-w-7xl mx-auto py-10 sm:py-15 px-4">
-            <p class="text-center text-base text-eve font-raleway font-light mb-3">Protect and enhance poverty.</p>
+            <p class="text-center text-base text-eve font-raleway font-light mb-3">We work to protect world</p>
             <h2 class="font-oswald font-bold text-4xl sm:text-5xl mb-6 text-center uppercase sm:mb-14">Current projects
             </h2>
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
@@ -102,10 +100,9 @@
         <div class="max-w-7xl mx-auto py-10 sm:py-20 px-4 grid grid-cols-1 sm:grid-cols-3 gap-5">
             <div class="">
                 <h2 class="text-white font-oswald font-bold text-5xl mb-7">Multiple Event <br> & Conference</h2>
-                <p class="text-white font-raleway font-light text-base mb-7">Contrary to popular belief, Lorem Ipsum is
-                    not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it
-                    over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,
-                </p>
+                <p class="text-white font-raleway font-light text-base mb-7">Focusing on research and development, we
+                    conduct surveys on specific problems in an effort to identify root causes and the best ways to
+                    address them in the society.</p>
                 <a href="{{ route('events') }}">
                     <x-largew-button>view all events</x-largew-button>
                 </a>
@@ -160,17 +157,17 @@
             <div class="bg-adam p-10">
                 <h2 class="text-white font-oswald font-bold text-5xl mb-7 text-center sm:text-left uppercase">we need
                     donation</h2>
-                <p class="text-white font-raleway font-light text-base mb-7 text-center sm:text-left">Alienum phaedrum
-                    torquatos nec eu, vis detrax culis ex, nihis in mei.</p>
+                <p class="text-white font-raleway font-light text-base mb-7 text-center sm:text-left">Help us to get
+                    raised for completing our projects successfully.</p>
                 <div class="">
                     <div class="flex justify-between">
-                        <p><span class="text-lg font-raleway font-bold text-eve">$6,550</span><br><span
+                        <p><span class="text-lg font-raleway font-bold text-eve">$0</span><br><span
                                 class="text-white">Goal raised</span></p>
                         <p><span class="text-lg font-raleway font-bold text-eve">$10,000</span><br><span
                                 class="text-white">Donation goal</span></p>
                     </div>
                     <div class="w-full bg-white">
-                        <div class="h-5 bg-orange-500 w-3/5"></div>
+                        <div class="h-5 bg-orange-500 w-0"></div>
                     </div>
                 </div>
             </div>
@@ -226,10 +223,10 @@
             <h2 class="font-oswald font-bold text-4xl sm:text-5xl mb-6 text-center uppercase sm:mb-14">Support our
                 mission</h2>
             <div class="flex justify-center mb-7">
-                <p class="sm:w-[768px] text-center">Right now, Dinghy foundation is working tirelessly around the clock
-                    to reach every child caught up in this unprecedented children's emergency. Your support is vital in
-                    enabling the survival of these children and in ensuring they have the chance to develop, thrive and
-                    reach their full potential.</p>
+                <p class="sm:w-[768px] text-center">Creating a beautiful and better society by supplying and ensuring
+                    fundamental needs to every impoverished individual and becoming an association and execution partner
+                    of Schools, NGOs, Corporates, and Government organizations in Bangladesh for advancement projects.
+                </p>
             </div>
             <div class="flex justify-center items-center">
                 <a href="">
@@ -267,24 +264,25 @@
     {{-- Mission --}}
     <div class="bg-white">
         <div class="max-w-7xl mx-auto py-10 sm:py-20 px-4 grid grid-cols-2 sm:grid-cols-5 gap-4">
-            <div class="border border-eve h-24 flex justify-center items-center p-4">
-                <img src="{{ asset('img/logos/logoipsum-256.svg') }}" alt="">
+            <div class="h-24 flex justify-center items-center">
+                <img src="{{ asset('img/logos/needdonor.png') }}" alt="">
             </div>
-            <div class="border border-eve h-24 flex justify-center items-center p-4">
-                <img src="{{ asset('img/logos/logoipsum-263.svg') }}" alt="">
+            <div class="h-24 flex justify-center items-center">
+                <img src="{{ asset('img/logos/needdonor.png') }}" alt="">
             </div>
-            <div class="border border-eve h-24 flex justify-center items-center p-4">
-                <img src="{{ asset('img/logos/logoipsum-257.svg') }}" alt="">
+            <div class="h-24 flex justify-center items-center">
+                <img src="{{ asset('img/logos/needdonor.png') }}" alt="">
             </div>
-            <div class="border border-eve h-24 flex justify-center items-center p-4">
-                <img src="{{ asset('img/logos/logoipsum-264.svg') }}" alt="">
+            <div class="h-24 flex justify-center items-center">
+                <img src="{{ asset('img/logos/needdonor.png') }}" alt="">
             </div>
-            <div class="border border-eve h-24 flex justify-center items-center p-4">
-                <img src="{{ asset('img/logos/logoipsum-288.svg') }}" alt="">
+            <div class="h-24 flex justify-center items-center">
+                <img src="{{ asset('img/logos/needdonor.png') }}" alt="">
             </div>
 
         </div>
     </div>
+
     <x-slot name="script">
         <script>
             localStorage.setItem('donationstatus', $('input[name="sitedonationstatus"]').val());

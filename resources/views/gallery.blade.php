@@ -7,6 +7,9 @@
     <div class="">
         <div class="max-w-7xl mx-auto py-10 sm:py-20 p-4">
             <div class="w-full flex justify-start space-x-5 mb-4">
+                <a href="{{ route('gallery',) }}">
+                    <p class=" px-4 py-1 inline-block text-eve uppercase transition duration-150 ease-in-out cursor-pointer hover:font-bold">All</p>
+                </a>
                 @forelse ($galleries as $gallery)
                 {{-- Gallery category --}}
                 <a href="{{ route('gallerydetails', $gallery->id ) }}">

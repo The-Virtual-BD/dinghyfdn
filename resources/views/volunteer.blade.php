@@ -7,7 +7,10 @@
     <div class="">
         <div class="max-w-7xl mx-auto py-10 sm:py-18 p-4">
             <h2 class="font-oswald font-bold text-4xl sm:text-5xl mb-6 text-center uppercase sm:mb-7">Terms and condition</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium aliquam nesciunt et porro. Illum commodi ab ut quos maiores, animi repellat inventore dolore? Aliquam, commodi molestias voluptates quae porro eos ipsam tenetur at itaque aspernatur sapiente voluptatum eius, alias ad. Laborum cumque cum veniam aliquid placeat optio tempore ea, perspiciatis vel! Voluptatum dolor rerum, exercitationem, consequatur suscipit quaerat praesentium vitae tenetur dolorem nesciunt ut culpa! Pariatur omnis suscipit odit dolor possimus consequatur ex, ullam et saepe rem animi magni voluptates optio laudantium iste. Voluptatibus ea delectus aspernatur saepe molestiae maiores hic, repellat inventore tempore consequuntur repellendus dolorem quisquam dolores libero architecto in eum doloribus laudantium temporibus aut dolor laborum mollitia doloremque distinctio. Neque soluta alias reprehenderit iusto a veritatis quis asperiores, officiis molestiae doloribus repudiandae ab dolorem numquam accusantium quisquam, iure in, quia iste. Perspiciatis a consequatur deleniti culpa. Aliquam impedit deserunt explicabo a at dolor. Dolor animi aliquid hic asperiores exercitationem? Sit aperiam nihil quod dolor eligendi possimus recusandae, quas nisi dolorum. Deleniti minima, fuga quasi porro odit itaque earum quod assumenda ut ipsa eaque beatae eum? Sint, expedita a nobis odio voluptas cumque, rem eligendi, nemo atque nisi blanditiis dolore nulla officiis esse facere. Accusamus minus recusandae corporis!</p>
+            <div class="text-center">
+
+                <p class="text-center">We are upgrading our terms and conditions. Thank you for your patient.</p>
+            </div>
             <div class="mt-4 flex justify-center items-center">
 
                 <x-largee-button onclick="volunteerapply()">Accept and Apply</x-largee-button>

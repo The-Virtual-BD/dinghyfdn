@@ -14,26 +14,53 @@
     <div class="p-6 relative">
 
         <x-auth-session-status :status=" Session::get('message')"></x-auth-session-status>
-        
-        <div class="p-6 bg-white rounded-md w-96 mb-4 flex justify-between items-center">
-            <h2 class="font-raleway font-bold uppercase text-eve">Donation</h2>
+        <div class="flex justify-start sm:space-x-5">
+            <div class="p-6 bg-white rounded-md w-96 mb-4 flex justify-between items-center">
+                <h2 class="font-raleway font-bold uppercase text-eve">Donation</h2>
 
-            @php
-                $donation = $settings->where('property','donation')->first();
-            @endphp
-            <form method="POST" action="{{ route('settings.update', $donation->id) }}" class="flex justify-end items-center" id="donationstatusform">
-                @csrf
-                @method("PATCH")
-                <!-- Value -->
-                <div class="">
-                    <x-text-input id="value" class="block mt-1 w-full" type="hidden" name="value" />
-                    <input type="hidden" id="value" name="value" value="{{$donation->value}}" required >
-                </div>
-                <div class="pointer-events-auto h-6 w-10 rounded-full p-1  transition duration-200 ease-in-out @if ($donation->value == 'yes')  bg-eve @else bg-slate-900/10 @endif" id="donationToggle">
-                    <div class="h-4 w-4 rounded-full bg-white shadow-sm ring-1 ring-slate-700/10 transition duration-200 ease-in-out @if ($donation->value == 'yes') translate-x-4 @endif"></div>
-                </div>
-            </form>
+                @php
+                    $donation = $settings->where('property','donation')->first();
+                @endphp
+                <form method="POST" action="{{ route('settings.update', $donation->id) }}" class="flex justify-end items-center" id="donationstatusform">
+                    @csrf
+                    @method("PATCH")
+                    <!-- Value -->
+                    <div class="">
+                        <x-text-input id="value" class="block mt-1 w-full" type="hidden" name="value" />
+                        <input type="hidden" id="value" name="value" value="{{$donation->value}}" required >
+                    </div>
+                    <div class="pointer-events-auto h-6 w-10 rounded-full p-1  transition duration-200 ease-in-out @if ($donation->value == 'yes')  bg-eve @else bg-slate-900/10 @endif" id="donationToggle">
+                        <div class="h-4 w-4 rounded-full bg-white shadow-sm ring-1 ring-slate-700/10 transition duration-200 ease-in-out @if ($donation->value == 'yes') translate-x-4 @endif"></div>
+                    </div>
+                </form>
+            </div>
+            <div class="p-6 bg-white rounded-md mb-4 ">
+                <h2 class="font-raleway font-bold uppercase text-eve">Donation Collection</h2>
+
+                <form method="POST" action="" class="" id="donationstatusform">
+                    @csrf
+                    @method("PATCH")
+                    <div class="flex justify-end items-end space-x-5 mt-4">
+                        <!-- Value -->
+                        <div class="">
+                            <x-input-label>Total Collected</x-input-label>
+                            <x-text-input id="totalcollected" class="block mt-1 w-full" type="text" name="totalcollected" value="0"/>
+                        </div>
+                        <div class="">
+                            <x-input-label>Total Target</x-input-label>
+                            <x-text-input id="totaltarget" class="block mt-1 w-full" type="text" name="totaltarget" value="0"/>
+                        </div>
+                        <x-primary-button>Update</x-primary-button>
+                    </div>
+                    <p class="text-eve">Under Development</p>
+                </form>
+            </div>
+
         </div>
+
+
+
+
         <h2 class="font-raleway font-bold uppercase text-eve mb-4 text-lg">All Default email Text</h2>
         <div class="p-6 bg-white rounded-md mb-4 grid grid-cols-1 sm:grid-cols-3 gap-5">
             <div class="">

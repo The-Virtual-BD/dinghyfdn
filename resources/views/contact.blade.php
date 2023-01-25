@@ -16,7 +16,7 @@
                     <div class="text-center sm:text-left">
 
                         <p class="font-bold text-white uppercase font-oswald text-3xl">Visit Us:</p>
-                        <p class="font-raleway text-white text-xl">120 Park Avenue, <br> New York, NY 10044, USA</p>
+                        <p class="font-raleway text-white text-xl">Home #315 <br> Road #3, Phase #2 <br> Sonadanga R/A <br> Khulna - 9100</p>
                     </div>
                 </div>
                 <div
@@ -26,7 +26,7 @@
                     </span>
                     <div class="text-center sm:text-left">
                         <p class="font-bold text-white uppercase font-oswald text-3xl">Mail Us:</p>
-                        <p class="font-raleway text-white text-xl">dinghy@foundation.com</p>
+                        <p class="font-raleway text-white text-xl">contact@dinghyfdn.org</p>
                     </div>
                 </div>
                 <div
@@ -36,7 +36,7 @@
                     </span>
                     <div class="text-center sm:text-left">
                         <p class="font-bold text-white uppercase font-oswald text-3xl">Phone</p>
-                        <p class="font-raleway text-white text-xl">+880 1674 666 555</p>
+                        <p class="font-raleway text-white text-xl">+880 1902 624 501</p>
                     </div>
                 </div>
             </div>
@@ -53,9 +53,7 @@
     <div class="max-w-7xl mx-auto py-10 sm:py-15 px-4 bg-adam-light sm:-mt-[100px]">
         <div class="flex flex-col items-center">
             <h2 class="text-center font-oswald font-bold text-5xl uppercase text-eve mb-5">Send Us Message</h2>
-            <p class="text-center w-full sm:w-1/2 font-raleway text-lg">Contrary to popular belief, Lorem Ipsum is not
-                simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over
-                2000 years old.</p>
+            <p class="text-center w-full sm:w-1/2 font-raleway text-lg">If you have any concern, please let us know. Our team will response to you as soon as possible. Thank you for your kind interest on Dinghy Foundation.</p>
         </div>
         <form id="contactusfrom" class="mt-6 sm:px-20 sm:py-6">
             <div class="grid sm:grid-cols-2 gap-5 mb-4">
@@ -80,7 +78,7 @@
                 </div>
                 <div class="">
                     <x-input-label class="text-dark mb-2">Phone </x-input-label>
-                    <x-text-input type="text" placeholder="012345678975" required class="w-full text-dark-light"
+                    <x-text-input type="text" placeholder="(+1) --- ---" required class="w-full text-dark-light"
                         name="cfphone" id="cfphone">
                     </x-text-input>
                 </div>
@@ -101,20 +99,20 @@
     {{-- Mission --}}
     <div class="bg-white">
         <div class="max-w-7xl mx-auto py-10 sm:py-20 px-4 grid grid-cols-2 sm:grid-cols-5 gap-4">
-            <div class="border border-eve h-24 flex justify-center items-center p-4">
-                <img src="{{ asset('img/logos/logoipsum-256.svg') }}" alt="">
+            <div class="h-24 flex justify-center items-center">
+                <img src="{{ asset('img/logos/needdonor.png') }}" alt="">
             </div>
-            <div class="border border-eve h-24 flex justify-center items-center p-4">
-                <img src="{{ asset('img/logos/logoipsum-263.svg') }}" alt="">
+            <div class="h-24 flex justify-center items-center">
+                <img src="{{ asset('img/logos/needdonor.png') }}" alt="">
             </div>
-            <div class="border border-eve h-24 flex justify-center items-center p-4">
-                <img src="{{ asset('img/logos/logoipsum-257.svg') }}" alt="">
+            <div class="h-24 flex justify-center items-center">
+                <img src="{{ asset('img/logos/needdonor.png') }}" alt="">
             </div>
-            <div class="border border-eve h-24 flex justify-center items-center p-4">
-                <img src="{{ asset('img/logos/logoipsum-264.svg') }}" alt="">
+            <div class="h-24 flex justify-center items-center">
+                <img src="{{ asset('img/logos/needdonor.png') }}" alt="">
             </div>
-            <div class="border border-eve h-24 flex justify-center items-center p-4">
-                <img src="{{ asset('img/logos/logoipsum-288.svg') }}" alt="">
+            <div class="h-24 flex justify-center items-center">
+                <img src="{{ asset('img/logos/needdonor.png') }}" alt="">
             </div>
 
         </div>

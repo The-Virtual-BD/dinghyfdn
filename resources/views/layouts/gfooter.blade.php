@@ -9,13 +9,13 @@
                         <x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
                     </a>
                 </div>
-                <p class="mb-4 text-center sm:text-left">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum".</p>
+                <p class="mb-4 text-center sm:text-left">Dinghy Foundation is a non-profit organization.</p>
                 <div class="flex space-x-2 justify-center sm:justify-start" >
-                    <a href="" target="_blank" class="w-[32px] h-[32px] flex justify-center items-center text-white bg-blue-600"><span class="iconify" data-icon="ic:baseline-facebook"></span></a>
-                    <a href="" target="_blank" class="w-[32px] h-[32px] flex justify-center items-center text-white bg-blue-400"><span class="iconify" data-icon="mdi:twitter"></span></a>
-                    <a href="" target="_blank" class="w-[32px] h-[32px] flex justify-center items-center text-white bg-blue-800"><span class="iconify" data-icon="ri:linkedin-fill"></span></a>
+                    <a href="https://www.facebook.com/DinghyF/" target="_blank" class="w-[32px] h-[32px] flex justify-center items-center text-white bg-blue-600"><span class="iconify" data-icon="ic:baseline-facebook"></span></a>
+                    {{-- <a href="" target="_blank" class="w-[32px] h-[32px] flex justify-center items-center text-white bg-blue-400"><span class="iconify" data-icon="mdi:twitter"></span></a> --}}
+                    <a href="https://bd.linkedin.com/company/dinghyf" target="_blank" class="w-[32px] h-[32px] flex justify-center items-center text-white bg-blue-800"><span class="iconify" data-icon="ri:linkedin-fill"></span></a>
                     <a href="" target="_blank" class="w-[32px] h-[32px] flex justify-center items-center text-white bg-red-500"><span class="iconify" data-icon="ri:youtube-fill"></span></a>
-                    <a href="" target="_blank" class="w-[32px] h-[32px] flex justify-center items-center text-white bg-pink-600"><span class="iconify" data-icon="iconoir:instagram"></span></a>
+                    {{-- <a href="" target="_blank" class="w-[32px] h-[32px] flex justify-center items-center text-white bg-pink-600"><span class="iconify" data-icon="iconoir:instagram"></span></a> --}}
                 </div>
             </div>
 
@@ -70,7 +70,7 @@
         </div>
     </div>
     <div class="bg-eve py-4 text-center text-white font-raleway font-bold text-sm">
-        <p>© 2023. All rights reserved.  Powered <a href="https://www.thevirtualbd.com" target="_blank">The Virtual BD</a></p>
+        <p>© 2023. All rights reserved by <a href="https://www.dinghyfdn.org/">Dinghy Foundation</a></p>
     </div>
 
 </footer>

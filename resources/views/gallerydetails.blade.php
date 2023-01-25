@@ -11,6 +11,20 @@
     </div>
     <div class="">
         <div class="max-w-7xl mx-auto py-10 sm:py-20 p-4">
+            <div class="w-full flex justify-start space-x-5 mb-4">
+                <a href="{{ route('gallery',) }}">
+                    <p class=" px-4 py-1 inline-block text-eve uppercase transition duration-150 ease-in-out cursor-pointer hover:font-bold">All</p>
+                </a>
+                @forelse ($galleries as $item)
+                {{-- Gallery category --}}
+                <a href="{{ route('gallerydetails', $item->id ) }}">
+                    <p class=" px-4 py-1 inline-block text-eve uppercase transition duration-150 ease-in-out cursor-pointer hover:font-bold">{{$item->topic}}</p>
+                </a>
+                @empty
+                <p>No Topic Found</p>
+
+                @endforelse
+            </div>
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
                 @forelse ($gallery->media as $media)
 

@@ -7,10 +7,10 @@
     <div class="">
         <div class="max-w-7xl mx-auto py-10 sm:py-18 p-4">
             <h2 class="font-oswald font-bold text-4xl sm:text-5xl mb-6 text-center uppercase sm:mb-14">Founder</h2>
-            <div class="grid grid-cols-2 sm:grid-cols-4 gap-5">
+            <div class="flex justify-center gap-5">
                 @forelse ($founders as $member)
                 {{-- Member --}}
-                <div class="">
+                <div class="w-72">
                     <img src="{{asset($member->photo)}}" alt="" srcset="" class="w-full mb-2">
                     <p class="text-center font-raleway font-semibold text-xl text-dark mb-1">{{$member->name}}</p>
                     <p class="text-center font-raleway font-semibold text-lg text-dark-light mb-1">{{$member->designation}}</p>
