@@ -72,7 +72,11 @@
                 </div>
             </div>
             <div class="scds">
-                <x-largee-button onclick="openDonateFrom(100);" class="">{{ __('Donate Now!') }}</x-largee-button>
+                <div class="flex h-full justify-center items-center">
+                    <button class="inline-flex items-center p-1 sm:px-5 sm:py-4 bg-eve font-bold text-sm text-white font-raleway uppercase tracking-widest hover:bg-white border border-eve hover:border hover:border-eve hover:text-eve focus:outline-none transition ease-in-out duration-300" onclick="openDonateFrom(100);">
+                        Donate <span class="hidden sm:block">Now!</span>
+                    </button>
+                </div>
             </div>
 
 
