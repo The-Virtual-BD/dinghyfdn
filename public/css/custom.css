@@ -1,0 +1,42 @@
+/* Phone */
+.bg-home-hero {
+    background-image: url("../img/home-hero.jpg") !important;
+}
+.bg-team-hero {
+    background-image: url("../img/team-hero.jpg") !important;
+}
+.bg-projects-hero {
+    background-image: url("../img/projects-hero.jpg") !important;
+}
+.bg-wwo {
+    background-image: url("../img/wwo.png"),
+        linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9));
+}
+
+.owl-nav {
+    display: none;
+}
+
+.dataTables_length select {
+    width: 60px;
+}
+/* Larger then Phone */
+@media (min-width: 640px) {
+    .bg-home-hero {
+        background-image: url("../img/home-hero.jpg") !important;
+    }
+
+    .owl-nav {
+        display: flex;
+        justify-content: space-between;
+        font-size: 75px;
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        color: rgba(230, 57, 70, 0.7);
+        padding: 0 28px;
+    }
+}
+
+/* logo animation */

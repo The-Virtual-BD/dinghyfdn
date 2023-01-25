@@ -1,0 +1,296 @@
+<x-guest-layout>
+    <div class="p-4 sm:p-0 bg-home-hero bg-cover bg-center bg-no-repeat ">
+        <div class="max-w-7xl sm:pt-[250px] sm:pb-[120px] mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="pl-4 border-l-4 border-eve text-lg font-raleway italic text-white">Bangladesh</p>
+            <p class="font-bold font-oswald text-3xl sm:text-5xl text-white mt-5">We help poor students for their
+                <br>education & trying to support them <br> with money and educational elements.
+            </p>
+        </div>
+    </div>
+    <div class="bg-wwo bg-cover bg-no-repeat bg-center bg-blend-overlay">
+        <div class="max-w-7xl mx-auto py-10 sm:py-28 grid grid-cols-1 sm:grid-cols-2 gap-5 p-4">
+            <div class="flex justify-between gap-2">
+                <div class="relative">
+                    <img src="{{ asset('img/wwo.jpg') }}" alt="We Are World WIde Organization">
+                    <div class="bg-eve w-14 h-14 rounded-full flex justify-center items-center absolute top-1/3 sm:top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" onclick=" videopopup();">
+                        <span class="iconify text-white text-4xl" data-icon="material-symbols:play-arrow"></span>
+                    </div>
+                </div>
+                <div class="sm:pr-20 pt-0 sm:pt-10 text-right">
+                    <div class="mb-4 sm:mb-7">
+                        <p class="font-oswald font-bold text-3xl sm:text-5xl mb-1">6,478</p>
+                        <p class="italic font-raleway text-base sm:text-lg mb-3 sm:mb-5">Volunteers In 2022</p>
+                        <div class="flex justify-end">
+                            <hr class="border-b border-eve w-16 sm:w-32">
+                        </div>
+                    </div>
+                    <div class="mb-4 sm:mb-7">
+                        <p class="font-oswald font-bold text-3xl sm:text-5xl mb-1">2,348,195</p>
+                        <p class="italic font-raleway text-base sm:text-lg mb-3 sm:mb-5">People We Helped In 2020</p>
+                        <div class="flex justify-end">
+                            <hr class="border-b border-eve w-16 sm:w-32">
+                        </div>
+                    </div>
+                    <div class="">
+                        <p class="font-oswald font-bold text-3xl sm:text-5xl mb-1">$ 16M</p>
+                        <p class="italic font-raleway text-base sm:text-lg mb-3 sm:mb-5">Funds We Collected</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="">
+                <p class="font-raleway italic text-base sm:text-lg text-center sm:text-left mb-6">Help The Poor’s With
+                    Dinghy Foundation</p>
+                <h2 class="font-oswald font-bold text-4xl sm:text-5xl mb-6 text-center sm:text-left">We Are World WIde
+                    <br> Organization
+                </h2>
+                <p class="font-faleway text-base sm:text-lg mb-12 text-justify sm:text-left">On 24/11/2018, 50
+                    foundation students of the poorest of meritorious students started their journey to the quiz
+                    contest, painting competition and cultural establishment .The name was collected for the purpose of
+                    the education of the student student. In continuation of this we postpone the next 22/12/18 for
+                    distribution of Shibt Shastra. <br> <br>
+
+                    If someone wishes to join us in the Foundation, then the following forms are requested to be filled.
+                    You can solve all the problems in our country.
+                </p>
+                <a href="{{ route('about') }}" class="flex justify-center sm:justify-start">
+                    <x-largee-button>{{ __('Foundation info') }}</x-largee-button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-adam-light">
+        <div class="max-w-7xl mx-auto py-10 sm:py-15 px-4">
+            <p class="text-center text-base text-eve font-raleway font-light mb-3">Protect and enhance poverty.</p>
+            <h2 class="font-oswald font-bold text-4xl sm:text-5xl mb-6 text-center uppercase sm:mb-14">Current projects
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+                @forelse ($projects as $project)
+                    {{-- Project --}}
+                    <a href="{{ route('project', $project->id) }}">
+                        <div class="px-8 pb-8 pt-[125px] sm:pt-[242px] relative bg-adam bg-blend-overlay"
+                            style="background-image: url('{{ $project->cover }}')">
+                            <p class="bg-eve px-4 py-1 inline-block text-white uppercase absolute top-8 left-0 z-50">
+                                {{ $project->category->name }}</p>
+                            <h3 class="font-bold font-oswald text-2xl text-white uppercase mb-3">{{ $project->title }}
+                            </h3>
+                            <div class="scds">
+                                <div class="flex justify-between">
+                                    <p><span
+                                            class="text-lg font-raleway font-bold text-eve">${{ $project->raised_fund }}</span><br><span
+                                            class="text-white">Goal raised</span></p>
+                                    <p><span
+                                            class="text-lg font-raleway font-bold text-eve">${{ $project->target_fund }}</span><br><span
+                                            class="text-white">Donation goal</span></p>
+                                </div>
+                                <div class="w-full bg-white">
+                                    <div class="h-5 bg-orange-500 w-3/5"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                @empty
+                @endforelse
+            </div>
+        </div>
+    </div>
+
+
+    {{-- Events and conference --}}
+    <div class="bg-eve">
+        <div class="max-w-7xl mx-auto py-10 sm:py-20 px-4 grid grid-cols-1 sm:grid-cols-3 gap-5">
+            <div class="">
+                <h2 class="text-white font-oswald font-bold text-5xl mb-7">Multiple Event <br> & Conference</h2>
+                <p class="text-white font-raleway font-light text-base mb-7">Contrary to popular belief, Lorem Ipsum is
+                    not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it
+                    over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia,
+                </p>
+                <a href="{{ route('events') }}">
+                    <x-largew-button>view all events</x-largew-button>
+                </a>
+            </div>
+            <div class="sm:col-span-2 space-y-4">
+
+                @forelse ($events as $event)
+                    {{-- Event --}}
+                    <div class="bg-white w-full flex justify-between relative group">
+                        <a href="{{ route('eventsdetails', $event->id) }}"
+                            class="hidden group-hover:block absolute top-1/2 -translate-y-1/2 left-[50px] z-50">
+                            <x-smalle-button class="">View</x-smalle-button>
+                        </a>
+                        <img src="{{ asset($event->cover) }}" alt="" srcset=""
+                            class="max-w-[150px] hidden sm:block">
+                        <div class="flex flex-col justify-center p-4">
+                            <h3 class="text-dark font-raleway font-bold text-2xl mb-4">{{ $event->title }}</h3>
+                            <p class="font-raleway font-light text-sm">
+                                {{ date('d-M, Y', strtotime($event->date_one)) }} @if ($event->date_two)
+                                    - {{ date('d-M, Y', strtotime($event->date_two)) }}
+                                @endif
+                            </p>
+                            <p class="font-raleway font-light text-sm">@
+                                {{ date('H:i A', strtotime($event->time_one)) }} @if ($event->time_two)
+                                    - {{ date('H:i A', strtotime($event->date_two)) }}
+                                @endif
+                            </p>
+                        </div>
+                        <div
+                            class="flex flex-col justify-center px-4 py-4 sm:py-0 before:content-[''] before:h-20 before:w-[1px] before:bg-eve relative before:absolute before:top-1/4 before:left-0 before:-tranlate-y-1/2 pr-20">
+                            <p class="font-raleway font-bold font-base mb-4">Events Location:</p>
+                            <p class="font-raleway font-light text-sm">
+                                {{ $event->address_line_one }}<br>{{ $event->address_line_two }}<br>{{ $event->address_line_three }}
+                            </p>
+                        </div>
+                    </div>
+                @empty
+                    <p class="font-raleway font-bold font-base mb-4">No Event</p>
+                @endforelse
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+    {{-- Donation --}}
+    <div class="bg-adam-light scds">
+        <div class="max-w-7xl mx-auto py-10 sm:py-20 px-4 grid grid-cols-1 sm:grid-cols-3 gap-5">
+            <div class="bg-adam p-10">
+                <h2 class="text-white font-oswald font-bold text-5xl mb-7 text-center sm:text-left uppercase">we need
+                    donation</h2>
+                <p class="text-white font-raleway font-light text-base mb-7 text-center sm:text-left">Alienum phaedrum
+                    torquatos nec eu, vis detrax culis ex, nihis in mei.</p>
+                <div class="">
+                    <div class="flex justify-between">
+                        <p><span class="text-lg font-raleway font-bold text-eve">$6,550</span><br><span
+                                class="text-white">Goal raised</span></p>
+                        <p><span class="text-lg font-raleway font-bold text-eve">$10,000</span><br><span
+                                class="text-white">Donation goal</span></p>
+                    </div>
+                    <div class="w-full bg-white">
+                        <div class="h-5 bg-orange-500 w-3/5"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="sm:col-span-2 bg-white px-20 py-10">
+                <div class="flex justify-between sm:items-center flex-col sm:flex-row">
+                    <div class="">
+                        <p class="font-raleway font-base mb-1 text-center sm:text-left">Please select</p>
+                        <h3 class="uppercase font-oswald font-bold text-4xl text-dark mb-1 text-center sm:text-left">
+                            amount to donate</h3>
+                        <p class="font-raleway font-base mb-1 text-center sm:text-left">All donations are tax
+                            deductable.</p>
+                    </div>
+                    <form action="" method="post" id="indexDonate" class="">
+                        <div class="flex justify-center sm:justify-end items-center">
+                            <label for="dammount" class="px-4 py-2 bg-eve text-white border border-eve">$</label>
+                            <input type="text" name="dammount" id="dammount" value="100"
+                                class="px-8 py-2 border-dark border-l-white w-24 font-bold">
+                        </div>
+                    </form>
+                </div>
+                <div class="grid grid-cols-2 sm:grid-cols-6 gap-4 my-4">
+                    <span
+                        class="px-8 py-2 border border-dark flex justify-center items-center five cursor-pointer hover:border-eve hover:text-white hover:bg-eve"
+                        onclick="idfromset(10);">$10</span>
+                    <span
+                        class="px-8 py-2 border border-dark flex justify-center items-center five cursor-pointer hover:border-eve hover:text-white hover:bg-eve"
+                        onclick="idfromset(20);">$20</span>
+                    <span
+                        class="px-8 py-2 border border-dark flex justify-center items-center five cursor-pointer hover:border-eve hover:text-white hover:bg-eve"
+                        onclick="idfromset(50);">$50</span>
+                    <span
+                        class="px-8 py-2 border border-dark flex justify-center items-center five cursor-pointer hover:border-eve hover:text-white hover:bg-eve"
+                        onclick="idfromset(100);">$100</span>
+                    <span
+                        class="px-8 py-2 border border-dark flex justify-center items-center five cursor-pointer hover:border-eve hover:text-white hover:bg-eve"
+                        onclick="idfromset(200);">$200</span>
+                    <span
+                        class="px-8 py-2 border border-dark flex justify-center items-center five cursor-pointer hover:border-eve hover:text-white hover:bg-eve"
+                        onclick="toggleiReadOnly();">Custom</span>
+                </div>
+                <x-largee-button class="w-full flex justify-center items-center mt-6"
+                    onclick="openDonateFrom(document.querySelector('#indexDonate #dammount').value);">Donate Now!
+                </x-largee-button>
+            </div>
+        </div>
+    </div>
+
+
+    {{-- Mission --}}
+    <div class="bg-white">
+        <div class="max-w-7xl mx-auto py-10 sm:py-20 px-4">
+            <p class="text-center text-base text-eve font-raleway font-light mb-3">What Now?</p>
+            <h2 class="font-oswald font-bold text-4xl sm:text-5xl mb-6 text-center uppercase sm:mb-14">Support our
+                mission</h2>
+            <div class="flex justify-center mb-7">
+                <p class="sm:w-[768px] text-center">Right now, Dinghy foundation is working tirelessly around the clock
+                    to reach every child caught up in this unprecedented children's emergency. Your support is vital in
+                    enabling the survival of these children and in ensuring they have the chance to develop, thrive and
+                    reach their full potential.</p>
+            </div>
+            <div class="flex justify-center items-center">
+                <a href="">
+                    <x-largee-button>become a volunteer</x-largee-button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    {{-- Activities --}}
+    <div class="bg-adam-light">
+        <div class="max-w-7xl mx-auto py-10 sm:py-20 px-4">
+            <p class="text-center text-base text-eve font-raleway font-light mb-3">Our Album</p>
+            <h2 class="font-oswald font-bold text-4xl sm:text-5xl mb-6 text-center uppercase sm:mb-14">Discover our
+                activities</h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-6 gap-4 mb-4">
+                @forelse ($gallery->media as $media)
+                    <img src="{{ $media->original_url }}" alt="" srcset=""
+                        class="@if ($loop->index >= 6) col-span-2 @else  col-span-1 @endif">
+                @empty
+                @endforelse
+            </div>
+            <div class="flex justify-center items-center mt-4">
+                <a href="{{ route('gallery') }}">
+                    <x-largee-button>view all gallery</x-largee-button>
+                </a>
+            </div>
+        </div>
+        <form>
+            <input type="hidden" name="sitedonationstatus" value="{{ $donation->value }}">
+        </form>
+    </div>
+
+    {{-- Mission --}}
+    <div class="bg-white">
+        <div class="max-w-7xl mx-auto py-10 sm:py-20 px-4 grid grid-cols-2 sm:grid-cols-5 gap-4">
+            <div class="border border-eve h-24 flex justify-center items-center p-4">
+                <img src="{{ asset('img/logos/logoipsum-256.svg') }}" alt="">
+            </div>
+            <div class="border border-eve h-24 flex justify-center items-center p-4">
+                <img src="{{ asset('img/logos/logoipsum-263.svg') }}" alt="">
+            </div>
+            <div class="border border-eve h-24 flex justify-center items-center p-4">
+                <img src="{{ asset('img/logos/logoipsum-257.svg') }}" alt="">
+            </div>
+            <div class="border border-eve h-24 flex justify-center items-center p-4">
+                <img src="{{ asset('img/logos/logoipsum-264.svg') }}" alt="">
+            </div>
+            <div class="border border-eve h-24 flex justify-center items-center p-4">
+                <img src="{{ asset('img/logos/logoipsum-288.svg') }}" alt="">
+            </div>
+
+        </div>
+    </div>
+    <x-slot name="script">
+        <script>
+            localStorage.setItem('donationstatus', $('input[name="sitedonationstatus"]').val());
+        </script>
+    </x-slot>
+
+
+
+</x-guest-layout>
