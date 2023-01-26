@@ -8,6 +8,7 @@ use Yajra\Datatables\Datatables;
 use App\Http\Requests\StoreGalleryRequest;
 use App\Http\Requests\UpdateGalleryRequest;
 use App\Models\TemporaryFile;
+use Illuminate\Support\Facades\Session;
 
 class GalleryController extends Controller
 {
@@ -20,7 +21,7 @@ class GalleryController extends Controller
     {
 
         if ($request->ajax()) {
-            return Datatables::of( Gallery::all())->addIndexColumn()->make(true);
+            return Datatables::of(Gallery::all())->addIndexColumn()->make(true);
         }
         return view('dashboard.galleries.index');
     }
@@ -33,7 +34,6 @@ class GalleryController extends Controller
     public function create()
     {
         return view('dashboard.galleries.create');
-
     }
 
     /**
@@ -59,7 +59,7 @@ class GalleryController extends Controller
             }
         }
 
-        return redirect()->route('galleries.edit',$gallery->id);
+        return redirect()->route('galleries.edit', $gallery->id);
     }
 
     /**
@@ -82,7 +82,7 @@ class GalleryController extends Controller
     public function edit(Gallery $gallery)
     {
         $gallery->getMedia();
-        return view('dashboard.galleries.edit',compact('gallery'));
+        return view('dashboard.galleries.edit', compact('gallery'));
     }
 
     /**
@@ -112,7 +112,7 @@ class GalleryController extends Controller
             }
         }
 
-        return redirect()->route('galleries.edit',$gallery->id);
+        return redirect()->route('galleries.edit', $gallery->id);
     }
 
     /**
@@ -124,6 +124,9 @@ class GalleryController extends Controller
     public function destroy($id)
     {
         $gallery = Gallery::find($id);
+        if ($gallery->topic == 'Home') {
+            return response()->json(['status' => 'success', 'message' => 'This is default topic. It can not be deleted.']);
+        }
         $gallery->delete();
         return response()->json(['status' => 'success', 'message' => 'Gallery and Its Images deleted successfylly !']);
     }
