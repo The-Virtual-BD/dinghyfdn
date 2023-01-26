@@ -263,23 +263,22 @@
 
     {{-- Mission --}}
     <div class="bg-white">
-        <div class="max-w-7xl mx-auto py-10 sm:py-20 px-4 grid grid-cols-2 sm:grid-cols-5 gap-4">
-            <div class="h-24 flex justify-center items-center">
+        <div class="max-w-7xl mx-auto py-10 sm:py-20 px-4  owl-carousel">
+            <div class="">
                 <img src="{{ asset('img/logos/needdonor.png') }}" alt="">
             </div>
-            <div class="h-24 flex justify-center items-center">
+            <div class="">
                 <img src="{{ asset('img/logos/needdonor.png') }}" alt="">
             </div>
-            <div class="h-24 flex justify-center items-center">
+            <div class="">
                 <img src="{{ asset('img/logos/needdonor.png') }}" alt="">
             </div>
-            <div class="h-24 flex justify-center items-center">
+            <div class="">
                 <img src="{{ asset('img/logos/needdonor.png') }}" alt="">
             </div>
-            <div class="h-24 flex justify-center items-center">
+            <div class="">
                 <img src="{{ asset('img/logos/needdonor.png') }}" alt="">
             </div>
-
         </div>
     </div>
 
