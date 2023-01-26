@@ -125,7 +125,7 @@ class GalleryController extends Controller
     {
         $gallery = Gallery::find($id);
         if ($gallery->topic == 'Home') {
-            return response()->json(['status' => 'success', 'message' => 'This is default topic. It can not be deleted.']);
+            return response()->json(['status' => 'error', 'message' => 'This is default topic. It can not be deleted.']);
         }
         $gallery->delete();
         return response()->json(['status' => 'success', 'message' => 'Gallery and Its Images deleted successfylly !']);

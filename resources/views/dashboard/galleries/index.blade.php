@@ -24,7 +24,7 @@
                     <tr>
                         <th>Sl</th>
                         <th>Topic</th>
-                        <th>Action</th>
+                        <th class="text-right">Action</th>
                     </tr>
                 </thead>
             </table>
@@ -50,7 +50,7 @@
                         {
                             data: null,
                             render: function(data) {
-                                return `<div class="flex"><a href="${BASE_URL}dashboard/galleries/${data.id}/edit" class="bg-green-600 rounded-md text-white py-2 px-2 mx-1 hover:bg-green-700" ><span class="iconify" data-icon="ic:baseline-remove-red-eye"></span></a>
+                                return `<div class="flex justify-end"><a href="${BASE_URL}dashboard/galleries/${data.id}/edit" class="bg-green-600 rounded-md text-white py-2 px-2 mx-1 hover:bg-green-700" ><span class="iconify" data-icon="ic:baseline-remove-red-eye"></span></a>
                                 <button type="button"  class="bg-red-600 rounded-md text-white py-2 px-2 mx-1 hover:bg-red-700" onclick="galleryDelete(${data.id});"><span class="iconify" data-icon="bi:trash-fill"></span></button></div>`;
                             }
                         }
