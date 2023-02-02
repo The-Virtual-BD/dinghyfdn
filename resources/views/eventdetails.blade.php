@@ -36,6 +36,7 @@
                 </div>
             </div>
 
+            @if ($relatedevent)
 
             <a href="{{route('eventsdetails', $relatedevent->id)}}">
                 <div
@@ -44,6 +45,7 @@
                     <h3 class="font-bold font-oswald text-2xl text-white uppercase mb-3">{{$relatedevent->title}}</h3>
                 </div>
             </a>
+            @endif
         </div>
     </div>
 </x-guest-layout>

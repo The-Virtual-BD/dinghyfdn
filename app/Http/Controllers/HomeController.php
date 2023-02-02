@@ -28,7 +28,11 @@ class HomeController extends Controller
         $gallery = Gallery::where('topic', 'Home')->first();
         $gallery->getMedia();
         $donation = Setting::where('property', 'donation')->first();
-        return view('index', compact('projects', 'events', 'gallery', 'donation'));
+
+        $mastertarget = Setting::where('property', 'donattarget')->first();
+        $masterraised= Setting::where('property', 'donatraised')->first();
+
+        return view('index', compact('projects', 'events', 'gallery', 'donation','mastertarget','masterraised'));
     }
 
 

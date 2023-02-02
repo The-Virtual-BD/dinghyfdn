@@ -87,21 +87,7 @@ class SettingController extends Controller
 
                 $setting->update(['value' => 'yes']);
             }
-        }
-
-        if ($setting->property == 'newslettertxt') {
-            $setting->update(['value' => $request->value]);
-        }
-        if ($setting->property == 'donationtxt') {
-            $setting->update(['value' => $request->value]);
-        }
-        if ($setting->property == 'contactxt') {
-            $setting->update(['value' => $request->value]);
-        }
-        if ($setting->property == 'japptxt') {
-            $setting->update(['value' => $request->value]);
-        }
-        if ($setting->property == 'vapptxt') {
+        }else {
             $setting->update(['value' => $request->value]);
         }
 

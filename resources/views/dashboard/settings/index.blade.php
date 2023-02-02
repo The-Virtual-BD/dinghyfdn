@@ -36,24 +36,35 @@
             </div>
             <div class="p-6 bg-white rounded-md mb-4 ">
                 <h2 class="font-raleway font-bold uppercase text-eve">Donation Collection</h2>
-
-                <form method="POST" action="" class="" id="donationstatusform">
+                @php
+                    $donattarget = $settings->where('property','donattarget')->first();
+                    $donatraised = $settings->where('property','donatraised')->first();
+                @endphp
+                <form method="POST" action="{{ route('settings.update', $donattarget->id) }}">
+                    @csrf
+                    @method("PATCH")
+                    <div class="flex justify-end items-end space-x-5 mt-4">
+                        <div class="">
+                            <x-input-label>Total Target</x-input-label>
+                            <x-text-input id="value" class="block mt-1 w-full" type="text" name="value" value="{{$donattarget->value}}"/>
+                        </div>
+                        <x-primary-button>Update</x-primary-button>
+                    </div>
+                </form>
+                <form method="POST" action="{{ route('settings.update', $donatraised->id) }}">
                     @csrf
                     @method("PATCH")
                     <div class="flex justify-end items-end space-x-5 mt-4">
                         <!-- Value -->
                         <div class="">
                             <x-input-label>Total Collected</x-input-label>
-                            <x-text-input id="totalcollected" class="block mt-1 w-full" type="text" name="totalcollected" value="0"/>
-                        </div>
-                        <div class="">
-                            <x-input-label>Total Target</x-input-label>
-                            <x-text-input id="totaltarget" class="block mt-1 w-full" type="text" name="totaltarget" value="0"/>
+                            <x-text-input id="value" class="block mt-1 w-full" type="text" name="value" value="{{$donatraised->value}}"/>
                         </div>
                         <x-primary-button>Update</x-primary-button>
                     </div>
-                    <p class="text-eve">Under Development</p>
                 </form>
+
+
             </div>
 
         </div>

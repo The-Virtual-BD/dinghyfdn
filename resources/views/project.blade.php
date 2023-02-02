@@ -21,7 +21,9 @@
                 </div>
             </div>
             {{-- Project --}}
-            <div class="scds">
+            <div class="scds fundmeter">
+                <input type="hidden" name="raised" value="{{ $project->raised_fund }}">
+                <input type="hidden" name="target" value="{{ $project->target_fund }}">
 
                 <div class="bg-adam-light p-9 hidden sm:block max-h-[305px]">
                     <p class="inline-block text-dark uppercase top-8 left-0">Join Us</p>
@@ -31,7 +33,7 @@
                             <p class="text-dark"><span class="text-lg font-raleway font-bold text-eve mr-2">${{$project->raised_fund}}</span>of<span class="text-lg font-raleway font-bold text-eve mx-2">${{$project->target_fund}}</span><span class=""> raised</span></p>
                         </div>
                         <div class="w-full bg-white mb-4">
-                            <div class="h-5 bg-orange-500 w-3/5"></div>
+                            <div class="h-5 bg-orange-500 collected"></div>
                         </div>
                         <x-largee-button class="w-full flex justify-center items-center" onclick="openDonateFrom(100)">Donate Now! </x-largee-button>
                     </div>

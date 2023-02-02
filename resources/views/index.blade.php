@@ -3,7 +3,9 @@
         <div class="max-w-7xl sm:pt-[250px] sm:pb-[120px] mx-auto px-4 sm:px-6 lg:px-8">
             <p class="pl-4 border-l-4 border-eve text-lg font-raleway italic text-white">Bangladesh</p>
             <h1 class="invisible">Dinghy Foundation</h1>
-            <h2 class="font-bold font-oswald text-3xl sm:text-5xl text-white mt-5">In nutshell to work towards crafting a better Bangladesh which ensures basic health, education, empowerment, and equality to every citizen.</h2>
+            <h2 class="font-bold font-oswald text-3xl sm:text-5xl text-white mt-5">In nutshell to work towards crafting a
+                better Bangladesh which ensures basic health, education, empowerment, and equality to every citizen.
+            </h2>
         </div>
     </div>
     <div class="bg-wwo bg-cover bg-no-repeat bg-center bg-blend-overlay">
@@ -40,7 +42,8 @@
             </div>
             <div class="">
                 <p class="font-raleway italic text-base sm:text-lg text-center sm:text-left mb-6">We work for better
-                    <strong>world</strong> </p>
+                    <strong>world</strong>
+                </p>
                 <h2 class="font-oswald font-bold text-4xl sm:text-5xl mb-6 text-center sm:text-left">We Are World Wide
                     <br> Organization
                 </h2>
@@ -73,17 +76,19 @@
                                 {{ $project->category->name }}</p>
                             <h3 class="font-bold font-oswald text-2xl text-white uppercase mb-3">{{ $project->title }}
                             </h3>
-                            <div class="scds">
+                            <div class="scds fundmeter">
+                                <input type="hidden" name="raised" value="{{ $project->raised_fund }}">
+                                <input type="hidden" name="target" value="{{ $project->target_fund }}">
                                 <div class="flex justify-between">
                                     <p><span
-                                            class="text-lg font-raleway font-bold text-eve">${{ $project->raised_fund }}</span><br><span
+                                            class="text-lg font-raleway font-bold text-eve raised">${{ $project->raised_fund }}</span><br><span
                                             class="text-white">Goal raised</span></p>
                                     <p><span
-                                            class="text-lg font-raleway font-bold text-eve">${{ $project->target_fund }}</span><br><span
+                                            class="text-lg font-raleway font-bold text-eve target">${{ $project->target_fund }}</span><br><span
                                             class="text-white">Donation goal</span></p>
                                 </div>
                                 <div class="w-full bg-white">
-                                    <div class="h-5 bg-orange-500 w-3/5"></div>
+                                    <div class="h-5 bg-orange-500 collected"></div>
                                 </div>
                             </div>
                         </div>
@@ -108,7 +113,6 @@
                 </a>
             </div>
             <div class="sm:col-span-2 space-y-4">
-
                 @forelse ($events as $event)
                     {{-- Event --}}
                     <div class="bg-white w-full flex justify-between relative group">
@@ -127,7 +131,7 @@
                             </p>
                             <p class="font-raleway font-light text-sm">@
                                 {{ date('H:i A', strtotime($event->time_one)) }} @if ($event->time_two)
-                                    - {{ date('H:i A', strtotime($event->date_two)) }}
+                                    - {{ date('H:i A', strtotime($event->time_two)) }}
                                 @endif
                             </p>
                         </div>
@@ -142,9 +146,6 @@
                 @empty
                     <p class="font-raleway font-bold font-base mb-4">No Event</p>
                 @endforelse
-
-
-
             </div>
         </div>
     </div>
@@ -152,7 +153,10 @@
 
 
     {{-- Donation --}}
-    <div class="bg-adam-light scds">
+    <div class="bg-adam-light scds fundmeter">
+        <input type="hidden" name="raised" value="{{ $masterraised->value }}">
+        <input type="hidden" name="target" value="{{ $mastertarget->value }}">
+
         <div class="max-w-7xl mx-auto py-10 sm:py-20 px-4 grid grid-cols-1 sm:grid-cols-3 gap-5">
             <div class="bg-adam p-10">
                 <h2 class="text-white font-oswald font-bold text-5xl mb-7 text-center sm:text-left uppercase">we need
@@ -161,13 +165,13 @@
                     raised for completing our projects successfully.</p>
                 <div class="">
                     <div class="flex justify-between">
-                        <p><span class="text-lg font-raleway font-bold text-eve">$0</span><br><span
+                        <p><span class="text-lg font-raleway font-bold text-eve">${{ $masterraised->value }}</span><br><span
                                 class="text-white">Goal raised</span></p>
-                        <p><span class="text-lg font-raleway font-bold text-eve">$10,000</span><br><span
+                        <p><span class="text-lg font-raleway font-bold text-eve">${{ $mastertarget->value }}</span><br><span
                                 class="text-white">Donation goal</span></p>
                     </div>
                     <div class="w-full bg-white">
-                        <div class="h-5 bg-orange-500 w-0"></div>
+                        <div class="h-5 bg-orange-500 collected"></div>
                     </div>
                 </div>
             </div>

@@ -15,9 +15,20 @@ class SettingSeeder extends Seeder
      */
     public function run()
     {
-        $setting = Setting::create([
-            'property' => 'donation',
-            'value' => 'yes',
-        ]);
+        $settings = [
+            [ 'property' => 'donation', 'value' => 'yes' ],
+            [ 'property' => 'newslettertxt', 'value' => 'Thanks for subscribing.' ],
+            [ 'property' => 'donationtxt', 'value' => 'Thanks for donatin' ],
+            [ 'property' => 'contactxt', 'value' => 'Thanks for your interest' ],
+            [ 'property' => 'vapptxt', 'value' => 'Thanks for your interest' ],
+            [ 'property' => 'japptxt', 'value' => 'Thanks for your interest' ],
+            [ 'property' => 'donattarget', 'value' => '100000' ],
+            [ 'property' => 'donatraised', 'value' => '0' ],
+        ];
+
+
+        foreach($settings as $setting){
+            Setting::create($setting);
+        }
     }
 }

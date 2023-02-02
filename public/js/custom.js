@@ -202,3 +202,13 @@ function videopopup() {
 }
 
 
+// Parcent meter calculation
+$('.scds.fundmeter').each(function (index, element) {
+    var raised = $(this).find('input[name="raised"]').val();
+    var target = $(this).find('input[name="target"]').val();//10000
+    var collected = $(this).find('.collected');
+    var parcent = raised/target*100+'%';
+    collected.css('width', parcent);
+});
+
+
