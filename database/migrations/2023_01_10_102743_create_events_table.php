@@ -20,6 +20,7 @@ return new class extends Migration
             $table->foreignId('category_id')->constrained("categories")->onUpdate('cascade')->onDelete('cascade');
             $table->longText('body');
             $table->string('cover');
+            $table->string('thumbnail');
             $table->date('date_one');
             $table->date('date_two')->nullable();
             $table->time('time_one');
@@ -32,7 +33,8 @@ return new class extends Migration
             $table->string('organizer_phone')->nullable();
             $table->string('organizer_webname')->nullable();
             $table->string('organizer_weblink')->nullable();
-            $table->enum('status', ['upcomming', 'completed', 'canceled'])->default('upcomming');
+            $table->tinyInteger('status')->default(1)->comment('1 => upcoming, 2 => completed, 3 => cancelled');
+
             $table->timestamps();
         });
     }

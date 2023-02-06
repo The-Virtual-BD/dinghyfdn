@@ -25,7 +25,7 @@
 
                 {{-- Gallery category --}}
                 <a href="{{ route('gallerydetails', $gallery->id ) }}">
-                    <div class="px-8 pb-8 pt-[125px] sm:pt-[242px] group gPic transition duration-150 ease-in-out" style="background-image: url('{{$gallery->media->first()->original_url}}')">
+                    <div class="px-8 pb-8 pt-[125px] sm:pt-[242px] group gPic transition duration-150 ease-in-out bg-cover bg-no-repeat bg-center" style="background-image: url('{{$gallery->media->first()->original_url}}')">
                         <p class="bg-eve px-4 py-1 inline-block text-white uppercase invisible group-hover:visible  transition duration-150 ease-in-out">{{$gallery->topic}}</p>
                     </div>
                 </a>

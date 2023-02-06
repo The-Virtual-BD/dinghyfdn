@@ -18,6 +18,7 @@ class Event extends Model implements HasMedia
         'category_id',
         'body',
         'cover',
+        'thumbnail',
         'date_one',
         'date_two',
         'time_one',

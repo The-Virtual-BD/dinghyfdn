@@ -52,6 +52,15 @@
 
                 </div>
 
+                <!-- File-->
+                <div class="">
+                    <x-input-label for="thumbnail" :value="__('Upload Thumbnail Image')" />
+                    <x-text-input type="file" class="block mt-1 w-full file:mr-5 file:py-3 file:px-4 file:border-0 file:font-raleway  file:text-white file:bg-eve text-eve" id="thumbnail" name="thumbnail"/>
+                    <p class="mt-1 text-sm text-adam font-raleway" id="file_input_help">png, jpg, jpeg (max. 2MB). 150x150</p>
+                    <x-input-error :messages="$errors->get('thumbnail')" class="mt-2" />
+
+                </div>
+
                 <!-- Start Time-->
                 <div class="">
                     <x-input-label for="time_one" :value="__('Start Time')" />
@@ -97,9 +106,9 @@
                 <div class="">
                     <x-input-label for="status" :value="__('Status')" />
                     <select name="status" id="status" class="block mt-1 w-full">
-                        <option value="upcomming" selected>Upcomming</option>
-                        <option value="completed">Completed</option>
-                        <option value="canceled">Cancled</option>
+                        <option value="1" selected>Upcoming</option>
+                        <option value="2">Completed</option>
+                        <option value="3">Cancelled</option>
                     </select>
                     <x-input-error :messages="$errors->get('status')" class="mt-2" />
                 </div>

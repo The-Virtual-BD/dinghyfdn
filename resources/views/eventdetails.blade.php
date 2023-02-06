@@ -6,7 +6,7 @@
                     <div class="">
 
                         <p class="flex items-center"><span class="iconify text-eve mr-2" data-icon="uis:calender"></span>Date: {{ date('d-M, Y', strtotime($event->date_one)) }} @if ($event->date_two) - {{ date('d-M, Y', strtotime($event->date_two)) }}@endif</p>
-                        <p class="flex items-center"><span class="iconify text-eve mr-2" data-icon="ic:baseline-access-time-filled"></span>Time: {{ date('H:i A', strtotime($event->time_one))}} @if ($event->time_two) - {{ date('H:i A', strtotime($event->date_two)) }}@endif</p>
+                        <p class="flex items-center"><span class="iconify text-eve mr-2" data-icon="ic:baseline-access-time-filled"></span>Time: {{ date('H:i A', strtotime($event->time_one))}} @if ($event->time_two) - {{ date('H:i A', strtotime($event->time_two)) }}@endif</p>
                     </div>
                     <div class="">
                         <p class="flex items-center"><span class="iconify text-eve mr-2" data-icon="ic:round-category"></span><span class="mr-2" >Event Category:</span>{{$event->category->name}}</p>
@@ -37,14 +37,16 @@
             </div>
 
             @if ($relatedevent)
-
-            <a href="{{route('eventsdetails', $relatedevent->id)}}">
-                <div
-                    class="px-8 pb-8 pt-[125px] sm:pt-[242px] bg-adam bg-blend-overlay" style="background-image: url('{{asset($relatedevent->cover)}}')">
-                    <p class="bg-eve px-4 py-1 inline-block text-white uppercase">{{$relatedevent->category->name}}</p>
-                    <h3 class="font-bold font-oswald text-2xl text-white uppercase mb-3">{{$relatedevent->title}}</h3>
-                </div>
-            </a>
+            <div class="">
+                <h2 class="font-bold mb-4 text-eve font-raleway uppercase text-lg">More Events</h2>
+                <a href="{{route('eventsdetails', $relatedevent->id)}}">
+                    <div
+                        class="px-8 pb-8 pt-[125px] sm:pt-[242px] bg-adam bg-blend-overlay bg-cover bg-no-repeat bg-center" style="background-image: url('{{asset($relatedevent->thumbnail)}}')">
+                        <p class="bg-eve px-4 py-1 inline-block text-white uppercase">{{$relatedevent->category->name}}</p>
+                        <h3 class="font-bold font-oswald text-2xl text-white uppercase mb-3">{{$relatedevent->title}}</h3>
+                    </div>
+                </a>
+            </div>
             @endif
         </div>
     </div>

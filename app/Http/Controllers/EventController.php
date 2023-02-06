@@ -85,6 +85,15 @@ class EventController extends Controller
             $event->cover = $fileurl;
         }
 
+        if ($request->file('thumbnail')) {
+            $file = $request->file('thumbnail');
+            $filefullname = time().'.'.$file->getClientOriginalExtension();
+            $upload_path = 'img/uploads/events/thumbnail/';
+            $fileurl = $upload_path.$filefullname;
+            $success = $file->move($upload_path, $filefullname);
+            $event->thumbnail = $fileurl;
+        }
+
         $event->save();
 
 
@@ -112,10 +121,10 @@ class EventController extends Controller
      */
     public function show(Event $event)
     {
-        if ($event->status == 'upcomming') {
-            $event->status = 'completed';
+        if ($event->status == '1') {
+            $event->status = '2';
         }else {
-            $event->status = 'upcomming';
+            $event->status = '1';
         }
         $event->update();
         return redirect()->route('events.index');
@@ -189,6 +198,19 @@ class EventController extends Controller
             $event->cover = $fileurl;
         }
 
+        if ($request->file('thumbnail')) {
+            // Delete old thumbnail
+            if($event->thumbnail) {
+                unlink($event->thumbnail);
+            }
+            $file = $request->file('thumbnail');
+            $filefullname = time().'.'.$file->getClientOriginalExtension();
+            $upload_path = 'img/uploads/events/thumbnail/';
+            $fileurl = $upload_path.$filefullname;
+            $success = $file->move($upload_path, $filefullname);
+            $event->thumbnail = $fileurl;
+        }
+
         $event->update();
 
 
@@ -219,6 +241,9 @@ class EventController extends Controller
         $event = Event::find($id);
         if($event->cover) {
             unlink($event->cover);
+        }
+        if($event->thumbnail) {
+            unlink($event->thumbnail);
         }
         $event->delete();
         return response()->json(['status' => 'success', 'message' => 'Event deleted successfylly !']);

@@ -39,27 +39,6 @@
                             <th class="text-center">download</th>
                         </tr>
                     </thead>
-                    <tbody class="[&>*:nth-child(even)]:bg-adam-light text-xs sm:text-base">
-                        @forelse ($researches as $item)
-                        <tr>
-                            <td>{{$loop->index+1}}</td>
-                            <td>{{$item->number}}</td>
-                            <td>{{$item->subject}}</td>
-                            <td class="hidden sm:block">{{$item->supervisor}}</td>
-                            <td>{{ date('M d, Y', strtotime($item->publish_date)) }}</td>
-                            <td class="uppercase text-eve text-center cursor-pointer hover:font-bold">
-                                <a href="{{$item->link}}" target="_blank" class="" >view</a>
-                            </td>
-                            <td class="uppercase text-eve text-center cursor-pointer hover:font-bold">
-                                <a href="/{{$item->file}}" class="" >download</a>
-                            </td>
-                        </tr>
-                        @empty
-                        <tr>
-                            <td colspan="7" class="text-center">No Resesrch Yet.</td>
-                        </tr>
-                        @endforelse
-                    </tbody>
                 </table>
             </div>
         </div>
@@ -69,21 +48,53 @@
     <x-slot name="script">
         <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
         <script>
-            $(document).ready(function () {
-                $('#table-skalaton').removeClass('hidden');
 
-                $('#researchTable').on('init.dt',function() {
-                    $('#table-skalaton').addClass('hidden');
-                    $("#table-div").removeClass('invisible').show();
-                });
+            var ressearctTable = null;
 
-                setTimeout(function(){
-                    $('#researchTable').DataTable({
-                        paging: true,
-                        ordering: false,
-                        info: false,
-                    });
-                }, 1000);
+            $('#table-skalaton').removeClass('hidden');
+            $('#researchTable').on('init.dt',function() {
+                $('#table-skalaton').addClass('hidden');
+                $("#table-div").removeClass('invisible').show();
+            });
+
+            ressearctTable = $('#researchTable').DataTable({
+                processing: true,
+                serverSide: true,
+                ajax: "{!! route('research') !!}",
+                columns: [{
+                        "render": function(data, type, full, meta) {
+                            return meta.row + meta.settings._iDisplayStart + 1;
+                        }
+                    },
+                    {
+                        data: 'number',
+                        name: 'number'
+                    },
+                    {
+                        data: 'subject',
+                        name: 'subject'
+                    },
+                    {
+                        data: 'supervisor',
+                        name: 'supervisor'
+                    },
+                    {
+                        data: 'publish_date',
+                        name: 'publish_date'
+                    },
+                    {
+                        data: null,
+                        render: function(data) {
+                            return `<div class="flex justify-center"><a href="${data.link}" target="_blank" class="hover:text-eve" >View</a></div>`;
+                        }
+                    },
+                    {
+                        data: null,
+                        render: function(data) {
+                            return `<div class="flex justify-center"><a href="${BASE_URL}${data.file}" class="hover:text-eve" >Download</a></div>`;
+                        }
+                    }
+                ]
             });
 
 

@@ -59,9 +59,9 @@
                         {
                             data: null,
                             render: function (data) {
-                                if (data.status == 'upcomming'){
+                                if (data.status == '1'){
                                     var statusLabels = `<a href="${BASE_URL}dashboard/events/${data.id}"><span class="iconify text-4xl text-eve" data-icon="ic:round-toggle-on"></span></a>`;
-                                }else if (data.status == 'completed'){
+                                }else if (data.status == '2'){
                                     var statusLabels = `<a href="${BASE_URL}dashboard/events/${data.id}"><span class="iconify text-4xl text-green-500" data-icon="ic:round-toggle-off"></span></a>`;
                                 }else {
                                     var statusLabels = `<span class="iconify text-4xl text-violet-500" data-icon="ic:round-toggle-off"></span>`;

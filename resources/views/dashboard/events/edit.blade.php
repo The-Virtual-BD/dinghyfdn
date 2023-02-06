@@ -88,9 +88,9 @@
                     <div class="mb-4">
                         <x-input-label for="status" :value="__('Status')" />
                         <select name="status" id="status" class="block mt-1 w-full">
-                            <option value="upcomming" @if ($event->status == 'upcomming') selected @endif>Upcomming</option>
-                            <option value="completed" @if ($event->status == 'completed') selected @endif>Completed</option>
-                            <option value="canceled" @if ($event->status == 'canceled') selected  @endif>Cancled</option>
+                            <option value="1" @if ($event->status == '1') selected @endif>Upcoming</option>
+                            <option value="2" @if ($event->status == '2') selected @endif>Completed</option>
+                            <option value="3" @if ($event->status == '3') selected  @endif>Cancelled</option>
                         </select>
                         <x-input-error :messages="$errors->get('status')" class="mt-2" />
                     </div>

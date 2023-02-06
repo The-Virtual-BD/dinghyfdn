@@ -7,9 +7,29 @@
     <div class="">
         <div class="max-w-7xl mx-auto py-10 sm:py-18 p-4">
             <h2 class="font-oswald font-bold text-4xl sm:text-5xl mb-6 text-center uppercase sm:mb-7">Terms and condition</h2>
-            <div class="text-center">
+            <div class="">
 
-                <p class="text-center">We are upgrading our terms and conditions. Thank you for your patient.</p>
+                <p class="text-left mb-6">The Dinghy Foundation is offering an opportunity for volunteers to make a positive impact on poverty, child development, education for the poor and street children, skill development, health programs, rural development, women empowerment, environment protection, and slum development. The foundation is committed to improving the lives of people and promoting a better world. If you are passionate about making a difference and are interested in volunteering with the Dinghy Foundation, then this is the perfect opportunity for you! Terms and Conditions for Dinghy Foundation Volunteers:</p>
+
+
+                    <ol class="list-decimal ml-6">
+                        <li>Purpose: The purpose of this program is to provide volunteer opportunities for individuals who are passionate about making a positive impact in the lives of others and the environment.</li>
+                        <li>Eligibility: All individuals who are at least 18 years of age and have a genuine interest in the mission and values of the Dinghy Foundation are eligible to apply.</li>
+                        <li>Time Commitment: Volunteers are required to commit to a minimum of 10 hours per week for a minimum of 3 months. Exceptions may be made for individuals with unique circumstances.</li>
+                        <li>Selection Process: The Dinghy Foundation reserves the right to select volunteers based on their qualifications, experience, and motivation.</li>
+                        <li>Training: All volunteers will be required to attend a comprehensive training program prior to the start of their volunteer assignment.</li>
+                        <li>Confidentiality: All volunteers are required to maintain strict confidentiality regarding all aspects of the Dinghy Foundation and its programs.</li>
+                        <li>Health and Safety: The Dinghy Foundation is committed to ensuring the health and safety of its volunteers. All volunteers must sign a waiver and agree to abide by the safety rules and guidelines set by the organization.</li>
+                        <li>Expenses: The Dinghy Foundation does not cover any expenses incurred by volunteers. This includes travel, accommodation, and meals.</li>
+                        <li>Termination: The Dinghy Foundation reserves the right to terminate the volunteer assignment at any time if the volunteer does not meet the expectations or violates any of the terms and conditions.</li>
+                        <li>Liability: The Dinghy Foundation is not responsible for any injuries or damages that may occur during the course of the volunteer assignment.</li>
+                    </ol>
+
+
+
+
+
+                    <p class="text-left mt-6"> By applying to be a volunteer with the Dinghy Foundation, you are agreeing to abide by these terms and conditions.</p>
             </div>
             <div class="mt-4 flex justify-center items-center">
 

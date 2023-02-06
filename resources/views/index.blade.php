@@ -116,12 +116,14 @@
                 @forelse ($events as $event)
                     {{-- Event --}}
                     <div class="bg-white w-full flex justify-between relative group">
+                        <div class="min-w-[180px] h-auto bg-no-repeat bg-cover bg-center" style="background-image: url('{{asset($event->thumbnail)}}')">
+
+                        </div>
                         <a href="{{ route('eventsdetails', $event->id) }}"
                             class="hidden group-hover:block absolute top-1/2 -translate-y-1/2 left-[50px] z-50">
                             <x-smalle-button class="">View</x-smalle-button>
                         </a>
-                        <img src="{{ asset($event->cover) }}" alt="" srcset=""
-                            class="max-w-[150px] hidden sm:block">
+                        {{-- <img src="{{ asset($event->thumbnail) }}" alt="" srcset="" class="h-auto aspect-square w-full  hidden sm:block"> --}}
                         <div class="flex flex-col justify-center p-4">
                             <h3 class="text-dark font-raleway font-bold text-2xl mb-4">{{ $event->title }}</h3>
                             <p class="font-raleway font-light text-sm">
@@ -165,8 +167,7 @@
                     raised for completing our projects successfully.</p>
                 <div class="">
                     <div class="flex justify-between">
-                        <p><span class="text-lg font-raleway font-bold text-eve">${{ $masterraised->value }}</span><br><span
-                                class="text-white">Goal raised</span></p>
+                        <p><span class="text-lg font-raleway font-bold text-eve">${{ $masterraised->value }}</span><br><span class="text-white">Goal raised</span></p>
                         <p><span class="text-lg font-raleway font-bold text-eve">${{ $mastertarget->value }}</span><br><span
                                 class="text-white">Donation goal</span></p>
                     </div>
@@ -233,7 +234,7 @@
                 </p>
             </div>
             <div class="flex justify-center items-center">
-                <a href="">
+                <a href="{{route('volunteer')}}">
                     <x-largee-button>become a volunteer</x-largee-button>
                 </a>
             </div>

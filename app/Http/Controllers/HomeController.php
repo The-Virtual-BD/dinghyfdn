@@ -18,6 +18,7 @@ use App\Models\Subscriber;
 use App\Models\Survey;
 use App\Models\Team;
 use Illuminate\Support\Facades\Mail;
+use Yajra\Datatables\Datatables;
 
 class HomeController extends Controller
 {
@@ -92,22 +93,32 @@ class HomeController extends Controller
 
 
     // Researches page
-    public function researches()
+    public function researches(Request $request)
     {
-        $researches = Research::all();
-        return view('researches', compact('researches'));
+        if ($request->ajax()) {
+            return Datatables::of( Research::all())->addIndexColumn()->make(true);
+        }
+        return view('researches');
     }
+
+
+
+
+
+
     // Cases page
-    public function cases()
-    {
-        $cases = CaseStudy::all();
-        return view('cases', compact('cases'));
+    public function cases(Request $request){
+        if ($request->ajax()) {
+            return Datatables::of( CaseStudy::all())->addIndexColumn()->make(true);
+        }
+        return view('cases');
     }
     // Surveys page
-    public function surveys()
-    {
-        $surveys = Survey::all();
-        return view('surveys', compact('surveys'));
+    public function surveys(Request $request){
+        if ($request->ajax()) {
+            return Datatables::of( Survey::all())->addIndexColumn()->make(true);
+        }
+        return view('surveys');
     }
 
 
