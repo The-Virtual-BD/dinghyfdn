@@ -1,16 +1,19 @@
 @extends('emails.master')
 @section('mailtitle')
-Hi !
+Welcome !
 @endsection
 @section('content')
 <tr class="" style="background-color: #ffffff;">
     <td class="p-5">
         {{-- <p style="font-size:30px; margin: 5px;text-align:center">{{ $newsletter['title'] }}</p> --}}
         <p class="font-raleway leading-6">
-            Dear User, <br />
+            Dear Applicant, <br />
 
-            {{$msg->text}}
+            Thank you for your interest in Dinghy Foundation and for taking the time to submit your application for the [Job Position]. We appreciate the opportunity to review your qualifications and experience.
 
+            Your application will be thoroughly reviewed by our HR team, and if we believe you are a good fit for the position, we will be in touch soon to schedule an interview. In the meantime, if you have any additional questions or would like to provide additional information, please do not hesitate to reach out.
+
+            Thank you again for considering Dinghy Foundation as your next career opportunity.
 
             Best regards,
             The Dinghy Foundation Team
@@ -28,3 +31,4 @@ Hi !
     </td>
 </tr>
 @endsection
+

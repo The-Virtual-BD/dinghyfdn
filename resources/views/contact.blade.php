@@ -43,7 +43,7 @@
 
             <div class="col-span-3">
                 <iframe class="w-full h-[420px]" id="gmap_canvas"
-                    src="https://maps.google.com/maps?q=khulna&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d919.3949693142347!2d89.5440874873811!3d22.81802612067602!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6eb9774472a52b23%3A0x72af3ba7e3132a48!2sDinghy%20Foundation!5e0!3m2!1sen!2sbd!4v1675763090759!5m2!1sen!2sbd" frameborder="0"
                     scrolling="no" marginheight="0" marginwidth="0"></iframe>
             </div>
 

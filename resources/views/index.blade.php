@@ -116,7 +116,7 @@
                 @forelse ($events as $event)
                     {{-- Event --}}
                     <div class="bg-white w-full flex justify-between relative group">
-                        <div class="min-w-[180px] h-auto bg-no-repeat bg-cover bg-center" style="background-image: url('{{asset($event->thumbnail)}}')">
+                        <div class="min-w-[180px] h-auto bg-no-repeat bg-cover bg-center hidden sm:block" style="background-image: url('{{asset($event->thumbnail)}}')">
 
                         </div>
                         <a href="{{ route('eventsdetails', $event->id) }}"

@@ -40,29 +40,31 @@
                     $donattarget = $settings->where('property','donattarget')->first();
                     $donatraised = $settings->where('property','donatraised')->first();
                 @endphp
-                <form method="POST" action="{{ route('settings.update', $donattarget->id) }}">
-                    @csrf
-                    @method("PATCH")
-                    <div class="flex justify-end items-end space-x-5 mt-4">
-                        <div class="">
-                            <x-input-label>Total Target</x-input-label>
-                            <x-text-input id="value" class="block mt-1 w-full" type="text" name="value" value="{{$donattarget->value}}"/>
+                <div class="flex gap-5">
+                    <form method="POST" action="{{ route('settings.update', $donattarget->id) }}">
+                        @csrf
+                        @method("PATCH")
+                        <div class="flex justify-end items-end space-x-5 mt-4">
+                            <div class="">
+                                <x-input-label>Total Target</x-input-label>
+                                <x-text-input id="value" class="block mt-1 w-full" type="text" name="value" value="{{$donattarget->value}}"/>
+                            </div>
+                            <x-primary-button>Update</x-primary-button>
                         </div>
-                        <x-primary-button>Update</x-primary-button>
-                    </div>
-                </form>
-                <form method="POST" action="{{ route('settings.update', $donatraised->id) }}">
-                    @csrf
-                    @method("PATCH")
-                    <div class="flex justify-end items-end space-x-5 mt-4">
-                        <!-- Value -->
-                        <div class="">
-                            <x-input-label>Total Collected</x-input-label>
-                            <x-text-input id="value" class="block mt-1 w-full" type="text" name="value" value="{{$donatraised->value}}"/>
+                    </form>
+                    <form method="POST" action="{{ route('settings.update', $donatraised->id) }}">
+                        @csrf
+                        @method("PATCH")
+                        <div class="flex justify-end items-end space-x-5 mt-4">
+                            <!-- Value -->
+                            <div class="">
+                                <x-input-label>Total Collected</x-input-label>
+                                <x-text-input id="value" class="block mt-1 w-full" type="text" name="value" value="{{$donatraised->value}}"/>
+                            </div>
+                            <x-primary-button>Update</x-primary-button>
                         </div>
-                        <x-primary-button>Update</x-primary-button>
-                    </div>
-                </form>
+                    </form>
+                </div>
 
 
             </div>
@@ -130,21 +132,6 @@
                     </div>
                 </form>
             </div>
-            <div class="">
-                <h2 class="font-raleway font-bold uppercase text-eve">Job Email</h2>
-                @php
-                    $japptxt = $settings->where('property','japptxt')->first();
-                @endphp
-                <form method="POST" action="{{ route('settings.update', $japptxt->id) }}" class="mt-2" id="">
-                    @csrf
-                    @method("PATCH")
-                    <textarea name="value" id="value" rows="3" class="w-full rounded-md border border-eve">{{$japptxt->value}}</textarea>
-                    <div class="flex justify-end mt-2">
-                        <x-primary-button>Update</x-primary-button>
-                    </div>
-                </form>
-            </div>
-
         </div>
     </div>
 
