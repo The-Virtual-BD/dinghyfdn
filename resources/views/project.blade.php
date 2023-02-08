@@ -13,11 +13,19 @@
             <div class="sm:col-span-2">
                 <img src="{{asset($project->cover)}}" alt="" srcset="" class="w-full mb-7">
                 <p class="mb-7 font-raleway text-base">{!!$project->body!!}</p>
-                <div class="flex space-x-2 justify-center sm:justify-start mt-4" >
+                <div class="flex space-x-2 justify-center items-center sm:justify-start mt-4" >
                     <p class="font-bold font-raleway text-lg">Share:</p>
-                    <a href="" target="_blank" class="w-[32px] h-[32px] flex justify-center items-center text-white bg-blue-600"><span class="iconify" data-icon="ic:baseline-facebook"></span></a>
-                    <a href="" target="_blank" class="w-[32px] h-[32px] flex justify-center items-center text-white bg-blue-400"><span class="iconify" data-icon="mdi:twitter"></span></a>
-                    <a href="" target="_blank" class="w-[32px] h-[32px] flex justify-center items-center text-white bg-blue-800"><span class="iconify" data-icon="ri:linkedin-fill"></span></a>
+
+                    <a href="https://www.facebook.com/sharer/sharer.php?u={{route('project', $project->id)}}" target="_blank" class="px-2 rounded-full py-[2px] text-xs flex justify-center items-center text-white bg-blue-600" rel="noopener">
+                        <span class="iconify mr-1" data-icon="ic:baseline-facebook"></span> Facrbook
+                    </a>
+
+
+                    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Twitter<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></a>
+
+                    <a href="https://www.linkedin.com/shareArticle?mini=true&url={{route('project', $project->id)}}&title={{$project->title}}&source={{route('home')}}" target="_blank" class="px-2 rounded-full py-[2px] text-xs flex justify-center items-center text-white bg-blue-800">
+                        <span class="iconify mr-1" data-icon="ri:linkedin-fill"></span> Linkedin
+                    </a>
                 </div>
             </div>
             {{-- Project --}}
