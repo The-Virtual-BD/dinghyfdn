@@ -44,7 +44,7 @@
             <div class="owl-carousel w-11/12 max-w-7xl ">
                 @foreach ($gallery->media as $media)
                 <div class="item flex items-center justify-center">
-                    <img src="{{$media->original_url}}" alt="" class="max-w-[1080px]">
+                    <img src="{{$media->original_url}}" alt="" class="max-w-[1080px] max-h-screen w-auto">
                 </div>
                 @endforeach
             </div>

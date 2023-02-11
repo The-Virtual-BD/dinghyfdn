@@ -1,5 +1,5 @@
 <div class="bg-adam-trans w-full h-full fixed top-0 bottom-0 right-0 left-0 z-[100]  justify-center items-center hidden " id="donationPopup">
-    <div class="p-10 w-11/12 max-w-2xl bg-white relative pt-14 max-h-[90vh] overflow-y-scroll">
+    <div class="p-10 w-11/12 max-w-2xl bg-white relative pt-14 max-h-[90vh] overflow-y-scroll sm:overflow-hidden">
         <button
             class="p-1 w-8 h-8 flex justify-center items-center bg-eve hover:bg-adam text-white absolute right-4 top-4 z-50" onclick="closeDonateFrom();">
             <span class="iconify" data-icon="akar-icons:cross"></span>
@@ -25,17 +25,17 @@
                 <div class="flex items-center">
                     <input id="test_method" name="pmethod" type="radio"
                         class="h-4 w-4 border-eve text-eve focus:ring-eve" checked="true" value="test">
-                    <label for="test_method" class="ml-3 block text-sm font-medium text-dark" >Test Donation</label>
+                    <label for="test_method" class="ml-3 block text-sm font-medium text-dark" >Online Transaction</label>
                 </div>
                 <div class="flex items-center">
                     <input id="offline_method" name="pmethod" type="radio"
                         class="h-4 w-4 border-eve text-eve focus:ring-eve" value="offline">
-                    <label for="offline_method" class="ml-3 block text-sm font-medium text-dark" >Offline Donation</label>
+                    <label for="offline_method" class="ml-3 block text-sm font-medium text-dark" >Bank Transfer</label>
                 </div>
                 <div class="flex items-center">
                     <input id="ccard_method" name="pmethod" type="radio"
                         class="h-4 w-4 border-eve text-eve focus:ring-eve" value="creditcard">
-                    <label for="ccard_method" class="ml-3 block text-sm font-medium text-dark" >Credit Card</label>
+                    <label for="ccard_method" class="ml-3 block text-sm font-medium text-dark" >Other</label>
                 </div>
             </div>
 

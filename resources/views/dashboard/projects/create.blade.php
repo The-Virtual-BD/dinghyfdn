@@ -46,7 +46,7 @@
                 <!-- File-->
                 <div class="">
                     <x-input-label for="cover" :value="__('Upload Cover Image')" />
-                    <x-text-input type="file" class="block mt-1 w-full file:mr-5 file:py-3 file:px-4 file:border-0 file:font-raleway  file:text-white file:bg-eve text-eve" id="cover" name="cover"/>
+                    <x-text-input type="file" class="block mt-1 w-full file:mr-5 file:py-3 file:px-4 file:border-0 file:font-raleway  file:text-white file:bg-eve text-eve" id="cover" name="cover" required/>
                     <p class="mt-1 text-sm text-adam font-raleway" id="file_input_help">png, jpg, jpeg (max. 2MB).</p>
                     <x-input-error :messages="$errors->get('cover')" class="mt-2" />
 

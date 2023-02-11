@@ -36,7 +36,7 @@
 
 
                 <div class="mt-4 sm:col-span-3">
-                    <input id="image" name="image[]" multiple="true" type="file" class="" required>
+                    <input id="image" name="image[]" multiple="true" type="file" class="block mt-1 w-full file:mr-5 file:py-3 file:px-4 file:border-0 file:font-raleway  file:text-white file:bg-eve text-eve" >
                 </div>
 
 
@@ -81,17 +81,17 @@
         <!-- Turn all file input elements into ponds -->
         <script>
             // Create the FilePond instance
-            FilePond.create(document.querySelector('input[name="image[]"]'), {
-                chunkUploads: true
-            });
-            FilePond.setOptions({
-                server: {
-                    url: '/tempUpload',
-                    headers: {
-                        'X-CSRF-TOKEN': "{{ @csrf_token() }}",
-                    }
-                }
-            });
+            // FilePond.create(document.querySelector('input[name="image[]"]'), {
+            //     chunkUploads: true
+            // });
+            // FilePond.setOptions({
+            //     server: {
+            //         url: '/tempUpload',
+            //         headers: {
+            //             'X-CSRF-TOKEN': "{{ @csrf_token() }}",
+            //         }
+            //     }
+            // });
         </script>
     </x-slot>
 </x-app-layout>

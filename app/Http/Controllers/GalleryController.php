@@ -47,17 +47,18 @@ class GalleryController extends Controller
 
         $gallery = Gallery::create(['topic' => $request->topic]);
 
-        if ($request->image) {
-            foreach ($request->image as $image) {
-                $tempfile = TemporaryFile::where('folder', $image)->first();
-                if ($tempfile) {
-                    $gallery->addMedia(storage_path('app/images/tmp/' . $image . '/' . $tempfile->filename))
-                        ->toMediaCollection('images');
-                    rmdir(storage_path('app/images/tmp/' . $image));
-                    $tempfile->delete();
-                }
+        if ($images = $request->file('image')) {
+            foreach ($images as $image) {
+                $gallery->addMedia($image)->toMediaCollection('images');
             }
         }
+
+
+        // if ($request->image) {
+        //     foreach ($request->image as $image) {
+        //         $gallery->addMediaFromRequest('image')->toMediaCollection('images');
+        //     }
+        // }
 
         return redirect()->route('galleries.edit', $gallery->id);
     }
@@ -94,21 +95,14 @@ class GalleryController extends Controller
      */
     public function update(UpdateGalleryRequest $request, Gallery $gallery)
     {
-
-        if ($request->topic != $gallery->topic) {
+        if ($gallery->topic != 'Home' && $request->topic != $gallery->topic) {
             $gallery->topic = $request->topic;
             $gallery->update();
         }
 
-        if ($request->image) {
-            foreach ($request->image as $image) {
-                $tempfile = TemporaryFile::where('folder', $image)->first();
-                if ($tempfile) {
-                    $gallery->addMedia(storage_path('app/images/tmp/' . $image . '/' . $tempfile->filename))
-                        ->toMediaCollection('images');
-                    rmdir(storage_path('app/images/tmp/' . $image));
-                    $tempfile->delete();
-                }
+        if ($images = $request->file('image')) {
+            foreach ($images as $image) {
+                $gallery->addMedia($image)->toMediaCollection('images');
             }
         }
 
