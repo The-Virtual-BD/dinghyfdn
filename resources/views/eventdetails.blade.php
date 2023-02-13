@@ -58,5 +58,12 @@
             @endif
         </div>
     </div>
+
+    <x-slot name="script">
+        <script>
+            $('ul').addClass('list-disc ml-4');
+            $('ol').addClass('list-decimal ml-4');
+        </script>
+    </x-slot>
 </x-guest-layout>
 

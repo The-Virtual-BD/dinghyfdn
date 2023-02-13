@@ -197,7 +197,9 @@
             });
 
             // CKEditor 4
-            CKEDITOR.replace( 'body' );
+            CKEDITOR.replace( 'body' , {
+                customConfig: '/js/ckeditor_config.js'
+            });
         </script>
     </x-slot>
 </x-app-layout>

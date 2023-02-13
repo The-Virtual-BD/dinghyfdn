@@ -160,6 +160,8 @@
         <script src="https://unpkg.com/filepond/dist/filepond.js"></script>
         <!-- Turn all file input elements into ponds -->
         <script>
+            $('ul').addClass('list-disc ml-4');
+            $('ol').addClass('list-decimal ml-4');
             // Create the FilePond instance
             FilePond.create(document.querySelector('input[name="image[]"]'), {
                 chunkUploads: true
@@ -174,7 +176,9 @@
             });
 
             // CKEditor 4
-            CKEDITOR.replace( 'body' );
+            CKEDITOR.replace( 'body' , {
+                customConfig: '/js/ckeditor_config.js'
+            });
         </script>
     </x-slot>
 </x-app-layout>

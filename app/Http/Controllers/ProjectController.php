@@ -46,6 +46,7 @@ class ProjectController extends Controller
      */
     public function store(StoreProjectRequest $request)
     {
+        // return $request;
         $project = new Project();
         $project->title = $request->title;
         $project->short_title = $request->short_title;

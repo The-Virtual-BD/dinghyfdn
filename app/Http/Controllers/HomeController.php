@@ -160,6 +160,8 @@ class HomeController extends Controller
         $projects = Project::with('category')->where('status','active')->get();
         return view('projects', compact('projects'));
     }
+
+    
     public function projectDetails(Project $project)
     {
         $project = Project::with('category')->find($project->id);
