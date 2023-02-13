@@ -11,7 +11,8 @@
                 @forelse ($projects as $item)
                 {{-- Project --}}
                 <div class="bg-adam-light">
-                    <img src="{{asset($item->cover)}}" alt="" srcset="" class="w-full mb-2">
+                    <div class="w-full h-64 bg-gray-700 bg-no-repeat bg-cover" style="background-image: url('{{ $item->cover }}')"></div>
+                    {{-- <img src="{{asset($item->cover)}}" alt="" srcset="" class="w-full mb-2"> --}}
                     <div class="p-8">
                         <p class="text-center sm:text-left font-oswald font-bold text-2xl text-dark mb-4">{{$item->title}}</p>
                         {{-- <p class="text-center sm:text-left font-raleway text-base text-dark mb-4">{!!$item->body!!}</p> --}}

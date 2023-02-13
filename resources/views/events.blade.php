@@ -12,7 +12,7 @@
                 {{-- Event --}}
                 <a href="{{route('eventsdetails', $item->id)}}">
                     <div class="px-8 pb-8 pt-[125px] sm:pt-[242px] bg-adam bg-blend-overlay relative overflow-hidden aspect-square bg-no-repeat bg-cover" style="background-image: url('{{asset($item->thumbnail)}}')">
-                        <div class="p-1 absolute bottom-0">
+                        <div class="absolute bottom-0">
                             <p class="bg-eve px-4 py-1 inline-block text-white uppercase">{{$item->category->name}}</p>
                             <h3 class="font-bold font-oswald text-2xl text-white uppercase mb-3">{{$item->title}}</h3>
                         </div>
@@ -25,6 +25,7 @@
             </div>
         </div>
     </div>
+
 
 
 </x-guest-layout>

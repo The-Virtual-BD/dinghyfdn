@@ -70,25 +70,27 @@
                 @forelse ($projects as $project)
                     {{-- Project --}}
                     <a href="{{ route('project', $project->id) }}">
-                        <div class="px-8 pb-8 pt-[125px] sm:pt-[242px] relative bg-adam bg-blend-overlay"
+                        <div class="px-8 pb-8  relative bg-adam bg-blend-overlay overflow-hidden aspect-square bg-no-repeat bg-cover"
                             style="background-image: url('{{ $project->cover }}')">
                             <p class="bg-eve px-4 py-1 inline-block text-white uppercase absolute top-8 left-0 z-50">
                                 {{ $project->category->name }}</p>
-                            <h3 class="font-bold font-oswald text-2xl text-white uppercase mb-3">{{ $project->title }}
-                            </h3>
-                            <div class="scds fundmeter">
-                                <input type="hidden" name="raised" value="{{ $project->raised_fund }}">
-                                <input type="hidden" name="target" value="{{ $project->target_fund }}">
-                                <div class="flex justify-between">
-                                    <p><span
-                                            class="text-lg font-raleway font-bold text-eve raised">${{ $project->raised_fund }}</span><br><span
-                                            class="text-white">Goal raised</span></p>
-                                    <p><span
-                                            class="text-lg font-raleway font-bold text-eve target">${{ $project->target_fund }}</span><br><span
-                                            class="text-white">Donation goal</span></p>
-                                </div>
-                                <div class="w-full bg-white">
-                                    <div class="h-5 bg-orange-500 collected"></div>
+                            <div class="absolute bottom-0 w-full left-0 px-8 pb-8">
+                                <h3 class="font-bold font-oswald text-2xl text-white uppercase mb-3">{{ $project->title }}
+                                </h3>
+                                <div class="scds fundmeter">
+                                    <input type="hidden" name="raised" value="{{ $project->raised_fund }}">
+                                    <input type="hidden" name="target" value="{{ $project->target_fund }}">
+                                    <div class="flex justify-between">
+                                        <p><span
+                                                class="text-lg font-raleway font-bold text-eve raised">${{ $project->raised_fund }}</span><br><span
+                                                class="text-white">Goal raised</span></p>
+                                        <p><span
+                                                class="text-lg font-raleway font-bold text-eve target">${{ $project->target_fund }}</span><br><span
+                                                class="text-white">Donation goal</span></p>
+                                    </div>
+                                    <div class="w-full bg-white">
+                                        <div class="h-5 bg-orange-500 collected"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

@@ -24,7 +24,7 @@ class HomeController extends Controller
 {
     public function home()
     {
-        $projects = Project::with('category')->latest()->take(3)->get();
+        $projects = Project::with('category')->where('status','active')->latest()->take(3)->get();
         $events = Event::latest()->take(2)->get();
         $gallery = Gallery::where('topic', 'Home')->first();
         $gallery->getMedia();
@@ -157,7 +157,7 @@ class HomeController extends Controller
 
     public function projects()
     {
-        $projects = Project::with('category')->get();
+        $projects = Project::with('category')->where('status','active')->get();
         return view('projects', compact('projects'));
     }
     public function projectDetails(Project $project)
