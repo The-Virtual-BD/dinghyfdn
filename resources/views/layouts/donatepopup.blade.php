@@ -13,11 +13,11 @@
             </div>
 
             <div class="grid grid-cols-2 sm:grid-cols-6 gap-4 mb-4">
-                <span class="px-8 py-2 border border-dark flex justify-center items-center five cursor-pointer hover:border-eve hover:text-white hover:bg-eve" onclick="dfromset(10)">$10</span>
-                <span class="px-8 py-2 border border-dark flex justify-center items-center five cursor-pointer hover:border-eve hover:text-white hover:bg-eve" onclick="dfromset(20)">$20</span>
+                <span class="px-8 py-2 border border-dark flex justify-center items-center five cursor-pointer hover:border-eve hover:text-white hover:bg-eve" onclick="dfromset(25)">$25</span>
                 <span class="px-8 py-2 border border-dark flex justify-center items-center five cursor-pointer hover:border-eve hover:text-white hover:bg-eve" onclick="dfromset(50)">$50</span>
                 <span class="px-8 py-2 border border-dark flex justify-center items-center five cursor-pointer hover:border-eve hover:text-white hover:bg-eve" onclick="dfromset(100)">$100</span>
-                <span class="px-8 py-2 border border-dark flex justify-center items-center five cursor-pointer hover:border-eve hover:text-white hover:bg-eve" onclick="dfromset(200)">$200</span>
+                <span class="px-8 py-2 border border-dark flex justify-center items-center five cursor-pointer hover:border-eve hover:text-white hover:bg-eve" onclick="dfromset(500)">$500</span>
+                <span class="px-8 py-2 border border-dark flex justify-center items-center five cursor-pointer hover:border-eve hover:text-white hover:bg-eve" onclick="dfromset(1000)">$1000</span>
                 <span class="px-8 py-2 border border-dark flex justify-center items-center five cursor-pointer hover:border-eve hover:text-white hover:bg-eve" onclick="toggleReadOnly();">Custom</span>
             </div>
             <p class="font-bold text-lg font-oswald text-eve mb-4 uppercase">Select Payment Method</p>

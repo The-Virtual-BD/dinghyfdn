@@ -191,17 +191,14 @@
                         <div class="flex justify-center sm:justify-end items-center">
                             <label for="dammount" class="px-4 py-2 bg-eve text-white border border-eve">$</label>
                             <input type="text" name="dammount" id="dammount" value="100"
-                                class="px-8 py-2 border-dark border-l-white w-24 font-bold">
+                                class=" py-2 border-dark border-l-white w-24 font-bold text-center">
                         </div>
                     </form>
                 </div>
                 <div class="grid grid-cols-2 sm:grid-cols-6 gap-4 my-4">
                     <span
                         class="px-8 py-2 border border-dark flex justify-center items-center five cursor-pointer hover:border-eve hover:text-white hover:bg-eve"
-                        onclick="idfromset(10);">$10</span>
-                    <span
-                        class="px-8 py-2 border border-dark flex justify-center items-center five cursor-pointer hover:border-eve hover:text-white hover:bg-eve"
-                        onclick="idfromset(20);">$20</span>
+                        onclick="idfromset(25);">$25</span>
                     <span
                         class="px-8 py-2 border border-dark flex justify-center items-center five cursor-pointer hover:border-eve hover:text-white hover:bg-eve"
                         onclick="idfromset(50);">$50</span>
@@ -210,7 +207,10 @@
                         onclick="idfromset(100);">$100</span>
                     <span
                         class="px-8 py-2 border border-dark flex justify-center items-center five cursor-pointer hover:border-eve hover:text-white hover:bg-eve"
-                        onclick="idfromset(200);">$200</span>
+                        onclick="idfromset(500);">$500</span>
+                    <span
+                        class="px-8 py-2 border border-dark flex justify-center items-center five cursor-pointer hover:border-eve hover:text-white hover:bg-eve"
+                        onclick="idfromset(1000);">$1000</span>
                     <span
                         class="px-8 py-2 border border-dark flex justify-center items-center five cursor-pointer hover:border-eve hover:text-white hover:bg-eve"
                         onclick="toggleiReadOnly();">Custom</span>
